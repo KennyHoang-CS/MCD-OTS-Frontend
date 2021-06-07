@@ -1,0 +1,7 @@
+
+.Simulator-Container {
+    background-color: #ccc;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 97vh;
+}
