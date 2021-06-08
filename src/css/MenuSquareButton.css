@@ -12,13 +12,22 @@
     align-items: center;
 }
 
+.Menu-Square-Content-3 {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.Menu-Square-Content {
+    font-weight: 600;
+}
+
 .Subname-1 {
     transform: translateY(-18px);
-    border-bottom: 2px solid white;
 }
 
 .Subname-2 {
     transform: translateY(-32px);
+    border-top: 2px solid white;
 }
 
 .MenuSquareButton p {

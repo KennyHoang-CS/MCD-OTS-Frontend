@@ -1,11 +1,10 @@
 import '../css/MenuSquareButton.css';
 
-function MenuSquareButton({ name1, name2 }) {
+function MenuSquareButton({ name1}) {
     return (
         <div className="Menu-Square-Button">
             <div className="Menu-Square-Content">
-                <p className="Subname-1">{ name1 }</p>
-                <p className="Subname-2">{ name2 }</p>
+                <p>{ name1 }</p>
             </div>
         </div>
     )

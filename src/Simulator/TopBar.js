@@ -1,6 +1,7 @@
 import '../css/NumbersBar.css';
 import NumbersBar from './NumbersBar';
 import MenuBar from './MenuBar';
+import SizingBar from './SizingBar';
 
 function TopBar() {
     
@@ -8,6 +9,7 @@ function TopBar() {
         <div className="Top-Container">
             <NumbersBar />
             <MenuBar />
+            <SizingBar />
         </div>
     )
 }
