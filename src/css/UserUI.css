@@ -1,0 +1,43 @@
+.User-Bar-Container {
+    display: grid;
+    grid-template-columns: 100px auto;
+    border: 2px solid black;
+    border-bottom: 3px solid white;
+    margin-right: 320px;
+    padding-bottom: 0;
+}
+
+.User-Logged {
+    color: white;
+    font-weight: 900;
+    width: 50px;
+    margin-left: 38px;
+    transform: translateX(-5px);
+}
+
+.User-Top {
+    display: grid;
+    grid-template-columns: 0.3fr 40px 1fr 0.5fr;
+}
+
+.User-Top p, .User-Bottom p {
+    border: 1px solid black;
+    background-color: rgb(231, 231, 231);
+}
+
+.User-Top .User-Top-White-Box {
+    background-color: white;
+    width: 40px;
+}
+
+.User-Bottom{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    transform: translateY(-32px);
+}
+
+.User-Icon {
+    color: red;
+    transform: translateY(-15px);
+    float: left;
+}

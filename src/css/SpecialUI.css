@@ -1,0 +1,27 @@
+
+.SpecialButton {
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    width: 55px; 
+    height: 55px;
+    padding: 15px;
+    margin: 5px;
+    position: relative;
+}
+
+.Special-Bar, .Special-Left-Buttons, .Special-Right-Buttons{
+    display: flex;
+}
+
+.Special-Bar {
+
+}
+
+.Special-Right-Buttons {
+
+}
+
+.Special-Left-Buttons {
+    
+}

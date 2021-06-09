@@ -1,0 +1,13 @@
+
+.Left-Side-Sim {
+    display: grid;
+    grid-template-rows: 1.2fr 1fr;
+}
+
+.Current-Items {
+    background-color: lightgoldenrodyellow;
+}
+
+.Customer-Order {
+    background-color: lightcoral;
+}

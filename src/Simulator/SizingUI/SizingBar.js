@@ -1,5 +1,5 @@
 import SizingButton from "./SizingButton";
-import '../css/SizingBar.css';
+import '../../css/SizingBar.css';
 
 function SizingBar() {
     

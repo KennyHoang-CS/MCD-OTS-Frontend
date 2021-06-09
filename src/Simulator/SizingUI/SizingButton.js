@@ -1,4 +1,4 @@
-import '../css/SizingBar.css';
+import '../../css/SizingBar.css';
 
 function SizingButton({ abbreviation, name }) {
     return (

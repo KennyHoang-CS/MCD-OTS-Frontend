@@ -1,11 +1,11 @@
 import '../css/simulator.css';
-import CurrentItems from './CurrentItems/CurrentItems';
-import TopBar from './TopBar';
+import LeftSideSim from './LeftSideSim/LeftSideSim';
+import TopBar from './TopSim/TopBar';
 
 function Simulator() {
     return (
         <div className="Simulator-Container">
-            {/*<CurrentItems />*/}
+            <LeftSideSim />
             <TopBar />
         </div>
     )

@@ -1,5 +1,5 @@
 import { Redirect } from 'react-router';
-import '../css/NumberCircleButton.css';
+import '../../css/NumberCircleButton.css';
 
 function NumberCircleButton({ number }) {
     return (

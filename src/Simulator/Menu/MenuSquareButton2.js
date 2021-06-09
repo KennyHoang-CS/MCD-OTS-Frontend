@@ -1,4 +1,4 @@
-import '../css/MenuSquareButton.css';
+import '../../css/MenuSquareButton.css';
 
 function MenuSquareButton2({ name1, name2 }) {
 
