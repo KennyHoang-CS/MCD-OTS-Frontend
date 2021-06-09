@@ -1,6 +1,7 @@
 
 .NumbersBar {
     display: flex;
+    transform: translateY(-3px);
 }
 
 .Top-Container {
@@ -9,4 +10,5 @@
 
 .MenuBar {
     display: flex;
+    transform: translateY(-5px);
 }

@@ -1,10 +1,10 @@
 .User-Bar-Container {
     display: grid;
     grid-template-columns: 100px auto;
+    grid-template-rows: 58px;
     border: 2px solid black;
     border-bottom: 3px solid white;
     margin-right: 320px;
-    padding-bottom: 0;
 }
 
 .User-Logged {
@@ -12,12 +12,13 @@
     font-weight: 900;
     width: 50px;
     margin-left: 38px;
-    transform: translateX(-5px);
+    transform: translateY(-16px);
 }
 
 .User-Top {
     display: grid;
     grid-template-columns: 0.3fr 40px 1fr 0.5fr;
+    transform: translateY(-12px);
 }
 
 .User-Top p, .User-Bottom p {
@@ -33,11 +34,12 @@
 .User-Bottom{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    transform: translateY(-32px);
+    transform: translateY(-43px);
 }
 
 .User-Icon {
     color: red;
-    transform: translateY(-15px);
+    transform: translateY(-47px);
     float: left;
+    margin-left: 7px;
 }

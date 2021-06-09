@@ -13,7 +13,7 @@ function UserBar() {
             <div className="User-Top">
                 <p>00:00</p>
                 <p className="User-Top-White-Box"></p>
-                <p>Kenny Hoang</p>
+                <p>Kenny Hoang is awesome</p>
                 <p>06/08/2021 19:50:47</p>
             </div>
             <div className="User-Bottom">

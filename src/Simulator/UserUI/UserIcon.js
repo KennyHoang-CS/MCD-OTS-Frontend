@@ -5,7 +5,7 @@ import '../../css/UserUI.css';
 function UserIcon() {
     return (
         <IconContext.Provider value={{ className: "User-Icon" }}>
-            <FaUser size="35px" />
+            <FaUser size="25px" />
         </IconContext.Provider>
     )
 }

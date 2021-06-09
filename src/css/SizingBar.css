@@ -1,13 +1,14 @@
 .Sizing-Bar {
     display: grid;
     margin-left: 12px;
+    transform: translateY(-17px);
 }
 
 .Sizing-Button {
     background-color: yellow;
-    width: 65px;
-    height: 65px;
-    border-radius: 15px;
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
     margin-top: 20px;
     transform: rotate(45deg);
 }
@@ -22,7 +23,7 @@
 
 .abbreviation {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 24px;
     transform: rotate(-45deg);
 }
 
