@@ -1,9 +1,9 @@
 import '../../css/NumbersBar.css';
 import NumbersBar from '../NumbersUI/NumbersBar';
 import MenuBar from '../Menu/MenuBar';
-import SizingBar from '../SizingUI/SizingBar';
 import SpecialBar from '../SpecialUI/SpecialBar';
 import UserBar from '../UserUI/UserBar';
+import MenuRoutes from '../FoodMenu/MenuRoutes/MenuRoutes';
 
 function TopBar() {
     
@@ -13,7 +13,7 @@ function TopBar() {
             <SpecialBar />
             <NumbersBar />
             <MenuBar />
-            <SizingBar />
+            <MenuRoutes />
         </div>
     )
 }

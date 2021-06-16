@@ -1,0 +1,61 @@
+.Food-Button, .Drink-Button, .Dessert-Button, .Food-Button img, .Drink-Button img, .Dessert-Button img {
+    width: 70px;
+    height: 50px;
+}
+
+.Food-Button, .Food-Button img {
+    background-color: red;
+}
+
+.Dessert-Button, .Dessert-Button img {
+    background-color: rgb(255, 209, 6);
+}
+
+.Drink-Button, .Drink-Button img {
+    background-color: rgba(49, 49, 245, 0.6);
+}
+
+.Food-Content, .Drink-Content, .Dessert-Content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+
+.Food-Content p, .Drink-Content p, .Dessert-Content p, .LSM-Content p {
+    width: 4.5vw;
+    font-size: 9px;
+    margin: 0;
+    color: white;
+    font-weight: 900;
+}
+
+.Dessert-Content p {
+    color: black;
+}
+
+.LSM-Button, .LSM-Button img {
+    width: 75px;
+    height: 65px;
+}
+
+.LSM-Button {
+    margin-left: 20px;
+}
+
+.LSM-Content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    margin-top: 10px;
+}
+
+.LSM-Button, .LSM-Button img {
+    background-color: rgba(180, 12, 180, 0.938);
+}
+
+.LSM-Content p {
+    font-size: 12px;
+    margin-top: 12px;
+}
+

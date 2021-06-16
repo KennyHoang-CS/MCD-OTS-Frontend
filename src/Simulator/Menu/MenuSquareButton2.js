@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import '../../css/MenuSquareButton.css';
 
 function MenuSquareButton2({ name1, name2 }) {
@@ -12,8 +13,12 @@ function MenuSquareButton2({ name1, name2 }) {
     return (
         <div className="Menu-Square-Button">
             <div className={className}>
-                <p className="Subname-1">{ name1 }</p>
-                <p className="Subname-2">{ name2 }</p>
+                <NavLink className="Subname-1" exact to={`/${name1}`}>
+                    { name1 }
+                </NavLink>
+                <NavLink className="Subname-2" exact to={`/${name2}`}>
+                    { name2 }
+                </NavLink>
             </div>
         </div>
     )
