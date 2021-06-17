@@ -1,12 +1,13 @@
 import '../../css/LeftSideSim.css';
+import CurrentOrder from './CurrentOrder';
 
 function LeftSideSim() {
     return (
         <div className="Left-Side-Sim">
-            <div className="Current-Items">
-                Current Items that user has placed goes here.
+            <div className="Current-Items-Container">
+                <CurrentOrder />
             </div>
-            <div className="Customer-Order">
+            <div className="Mock-Orders-Container">
                 Mock Orders goes here.
             </div>
         </div>

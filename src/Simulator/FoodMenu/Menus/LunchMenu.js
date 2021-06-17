@@ -13,6 +13,8 @@ function LunchMenu() {
         dispatch(fetchMenuFromAPI('LOAD_LUNCH_MENU', 'lunch'))
     }, [dispatch]);
         
+
+
     return (
         // render breakfast menu items. 
         <div className="Menu-Container">

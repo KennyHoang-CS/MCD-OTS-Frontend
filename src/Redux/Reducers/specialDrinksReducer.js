@@ -3,7 +3,6 @@ const INITIAL_STATE = [{
 }];
 
 function specialDrinksReducer(state = INITIAL_STATE, action) {
-    console.log("DRINKS!!")
     switch(action.type) {
         case 'LOAD_SPECIAL_DRINKS_MENU': 
             return {

@@ -4,10 +4,24 @@
     grid-template-rows: 1.2fr 1fr;
 }
 
-.Current-Items {
+.Current-Items-Container {
     background-color: lightgoldenrodyellow;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px;
+    overflow: scroll;
 }
 
-.Customer-Order {
+.Mock-Orders-Container {
     background-color: lightcoral;
+}
+
+.Current-Item {
+    color: red;
+    list-style: none;
+}
+
+.Current-Item h2 {
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
 }

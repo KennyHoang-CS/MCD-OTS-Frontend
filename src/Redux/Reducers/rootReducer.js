@@ -13,6 +13,7 @@ import happyMealReducer from './happyMealReducer';
 import mccafeReducer from './mccafeReducer';
 import lsmReducer from './lsmReducer';
 import condimentsReducer from './condimentsReducer';
+import currentOrderReducer from './currentOrderReducer';
 
 const rootReducer = combineReducers({ 
     breakfast: breakfastReducer, 
@@ -28,7 +29,8 @@ const rootReducer = combineReducers({
     dessert2: dessert2Reducer,
     happyMeal: happyMealReducer,
     lsm: lsmReducer,
-    condiments: condimentsReducer
+    condiments: condimentsReducer,
+    currentOrder: currentOrderReducer
 });
 
 export default rootReducer; 

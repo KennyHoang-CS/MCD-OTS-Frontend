@@ -3,7 +3,6 @@ const INITIAL_STATE = [{
 }];
 
 function drinksReducer(state = INITIAL_STATE, action) {
-    console.log("DRINKS!!")
     switch(action.type) {
         case 'LOAD_DRINKS_MENU': 
             return {

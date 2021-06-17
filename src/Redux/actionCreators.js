@@ -14,9 +14,22 @@ export function fetchMenuFromAPI(actionType, menu) {
     };
 }
 
+export function getCurrentOrder() {
+    return {
+        type: 'GET_CURRENT_ORDER_MENU'
+    }
+};
+
+export function addToCurrentOrder(newItem) {
+    return {
+        type: 'ADD_TO_CURRENT_ORDER',
+        order: newItem
+    }
+};
+
 function getMenu(actionType, menu) {
     return {
         type: actionType,
         menu
     }
-}
+};
