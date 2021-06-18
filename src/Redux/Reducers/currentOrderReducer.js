@@ -14,7 +14,6 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
             let found = state.order.findIndex(i => i.name === action.order.name);
 
             if (found !== -1) {
-                //alert(state.order[found].name);
                 state.order[found].count += 1;
                 
                 return {

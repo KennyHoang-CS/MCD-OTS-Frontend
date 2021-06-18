@@ -19,6 +19,17 @@ import '../../../css/MenuUI.css';
 function MenuRoutes() {
     return (
         <Switch>
+            <Route exact path="/">
+                <div className="Menu-Content-Container">
+                    <div>
+                        <SizingBar />
+                    </div>
+                    <div className="Menu-Subcontent-Container">
+                        <SpecialDrinksMenu />
+                        <DrinksMenu />
+                    </div>
+                </div>
+            </Route>
             <Route exact path="/breakfast">
                 <div className="Menu-Content-Container">
                     <div>

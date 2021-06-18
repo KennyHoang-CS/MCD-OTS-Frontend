@@ -1,10 +1,7 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector, shallowEqual } from "react-redux";
-import { getCurrentOrder, addToCurrentOrder } from "../../Redux/actionCreators";
+import { useSelector } from "react-redux";
 
 function CurrentOrder() {
     
-    const dispatch = useDispatch();
     const orderState = useSelector(state => state.currentOrder.order);    
     const myOrder = orderState.map(item => <li>{item.count} {item.name}</li>);
 

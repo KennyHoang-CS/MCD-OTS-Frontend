@@ -5,12 +5,23 @@
 }
 
 .Sizing-Button {
-    background-color: yellow;
+    background-color: #ffea2c;
     width: 55px;
     height: 55px;
     border-radius: 10px;
     margin-top: 20px;
     transform: rotate(45deg);
+}
+
+.Sizing-Button:hover {
+    background-color: #00308F;
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    margin-top: 20px;
+    transform: rotate(45deg);
+    transition: all 0.2;
 }
 
 .Sizing-Button-Content {

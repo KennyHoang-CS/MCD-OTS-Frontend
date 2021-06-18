@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { fetchMenuFromAPI } from '../../../Redux/actionCreators';
-import DessertButton from "../FoodButtons/DessertButton";
+import DrinkButton from "../FoodButtons/DrinkButton";
 import '../../../css/MenuUI.css';
 
 function McCafeMenu() {
@@ -16,7 +16,7 @@ function McCafeMenu() {
     return (
         // render breakfast menu items. 
         <div className="Menu-Container">
-            {menu && menu.map(food => <DessertButton name={food.name} image={food.imagesrc}/>)}
+            {menu && menu.map(food => <DrinkButton name={food.name} image={food.imagesrc}/>)}
         </div>
     )
 }

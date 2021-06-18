@@ -3,16 +3,37 @@
     height: 50px;
 }
 
-.Food-Button, .Food-Button img {
+.Food-Button {
     background-color: red;
 }
 
-.Dessert-Button, .Dessert-Button img {
+.Food-Button:hover {
+    background-color: red;
+    filter: brightness(85%);
+    cursor: pointer;
+    transition: all 0.2;
+}
+
+.Dessert-Button {
     background-color: rgb(255, 209, 6);
 }
 
-.Drink-Button, .Drink-Button img {
+.Dessert-Button:hover {
+    background-color: rgb(255, 209, 6);
+    filter: brightness(85%);
+    cursor: pointer;
+    transition: all 0.2;
+}
+
+.Drink-Button {
     background-color: rgba(49, 49, 245, 0.6);
+}
+
+.Drink-Button:hover {
+    background-color: rgba(49, 49, 245, 0.6);
+    filter: brightness(85%);
+    cursor: pointer;
+    transition: all 0.2;
 }
 
 .Food-Content, .Drink-Content, .Dessert-Content {

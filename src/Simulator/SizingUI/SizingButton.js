@@ -1,9 +1,13 @@
 import '../../css/SizingBar.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { setSize } from '../../Redux/actionCreators';
 
 function SizingButton({ abbreviation, name }) {
     
+    const dispatch = useDispatch();
+    
     function handleClick(name) {
-        alert(name);
+        dispatch(setSize(name));
     }
     
     return (

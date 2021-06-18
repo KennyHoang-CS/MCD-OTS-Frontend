@@ -3,6 +3,7 @@ import '../css/simulator.css';
 import LeftSideSim from './LeftSideSim/LeftSideSim';
 import TopBar from './TopSim/TopBar';
 
+
 function Simulator() {
     return (
         <BrowserRouter>

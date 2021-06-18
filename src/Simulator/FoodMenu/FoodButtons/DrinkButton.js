@@ -1,17 +1,22 @@
-import { useDispatch } from 'react-redux';
-import { addToCurrentOrder } from '../../../Redux/actionCreators'
+import { useDispatch, useSelector, shallowEqual } from 'react-redux';
+import { addToCurrentOrder, setSize } from '../../../Redux/actionCreators';
 import '../../../css/FoodUI.css';
+import { useEffect } from 'react';
 
 function DrinkButton({ name, image }) {
     
     const dispatch = useDispatch();
 
+    let sizeState = useSelector(state => state.size.size, shallowEqual);
+
     function add_to_order(name) {
         let newItem = {
-            name,
-            count: 1
+            name: `${sizeState || 'M'} ${name}`,
+            count: 1,
+            //size: sizeState
         };
         dispatch(addToCurrentOrder(newItem));
+        dispatch(setSize(''));
     };
 
     return (
