@@ -16,12 +16,14 @@
     background-color: lightcoral;
 }
 
-.Current-Item {
-    color: red;
+.Item-Wrapper li {
     list-style: none;
+    color: red;
+    font-size: small;
+    margin-left: 45px;
 }
 
-.Current-Item h2 {
+.Pending-Orders h2 {
     border-bottom: 2px solid black;
     padding-bottom: 10px;
 }

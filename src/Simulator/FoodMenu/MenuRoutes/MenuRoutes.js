@@ -20,12 +20,12 @@ function MenuRoutes() {
     return (
         <Switch>
             <Route exact path="/">
-                <div className="Menu-Content-Container">
+            <div className="Menu-Content-Container">
                     <div>
                         <SizingBar />
                     </div>
                     <div className="Menu-Subcontent-Container">
-                        <SpecialDrinksMenu />
+                        <LunchMenu />
                         <DrinksMenu />
                     </div>
                 </div>

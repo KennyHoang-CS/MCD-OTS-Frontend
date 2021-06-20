@@ -13,7 +13,7 @@ function DrinkButton({ name, image }) {
         let newItem = {
             name: `${sizeState || 'M'} ${name}`,
             count: 1,
-            //size: sizeState
+            foodType: 'drink'
         };
         dispatch(addToCurrentOrder(newItem));
         dispatch(setSize(''));

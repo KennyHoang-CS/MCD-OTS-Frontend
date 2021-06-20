@@ -6,12 +6,12 @@ function SizingButton({ abbreviation, name }) {
     
     const dispatch = useDispatch();
     
-    function handleClick(name) {
-        dispatch(setSize(name));
+    function handleClick(abbreviation) {
+        dispatch(setSize(abbreviation));
     }
     
     return (
-        <div className="Sizing-Button" onClick={() => handleClick(name)}>
+        <div className="Sizing-Button" onClick={() => handleClick(abbreviation)}>
             <div className="Sizing-Button-Content">
                 <p className="abbreviation">
                     { abbreviation }

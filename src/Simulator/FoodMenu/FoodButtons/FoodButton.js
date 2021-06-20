@@ -1,21 +1,43 @@
 import '../../../css/FoodUI.css';
-import { useDispatch } from 'react-redux';
-import { addToCurrentOrder } from '../../../Redux/actionCreators'
+import { useDispatch, useSelector, shallowEqual } from 'react-redux';
+import { addToCurrentOrder, setSize } from '../../../Redux/actionCreators'
 
-function FoodButton({ name, image }) {
+function FoodButton({ name, image, isCombo }) {
     
     const dispatch = useDispatch();
 
-    function add_to_order(name) {
+    let sizeState = useSelector(state => state.size.size, shallowEqual);
+    
+    function add_to_order(name, isCombo) {
+        let drinkMsg;
+        let itemName = `${sizeState} ${name}`;
+        let hasCombo = false;  
+        if(isCombo && sizeState !== '') {
+            if (sizeState === 'L') {
+                sizeState = 'Ml-Lrg';
+            }
+            if (sizeState === 'M') {
+                sizeState = 'Ml-Md';
+            } 
+            drinkMsg = 'Select Medium / Large Drink';
+            itemName = `${name} ${sizeState}`;
+        }
+        if(sizeState !== '' && isCombo) {
+            hasCombo = true;
+        }
+        
         let newItem = {
-            name,
-            count: 1
+            name: itemName,
+            count: 1,
+            drinkAlert: drinkMsg || '',
+            hasCombo: hasCombo
         };
         dispatch(addToCurrentOrder(newItem));
+        dispatch(setSize(''));
     };
 
     return (
-        <div className="Food-Button" onClick={() => add_to_order(name)}>
+        <div className="Food-Button" onClick={() => add_to_order(name, isCombo)}>
             <div className="Food-Content">
                 <p>{ name }</p>
                 <img src={image} alt="Food Pic"></img>
