@@ -62,14 +62,36 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
                 );
                 
                 if (drinkToInsertFound !== -1) {
-                    state.order[drinkToInsertFound].hasCombo = false; 
-                    return {
-                        ...state,
-                        order:  [
-                            ...state.order, 
-                            state.order[drinkToInsertFound].drinkAlert = action.order.name
-                        ]
-                    }; 
+                    
+                    if (state.order[drinkToInsertFound].count > 1) {
+                        
+                        state.order[drinkToInsertFound].count -= 1;
+                        // create new object. 
+                        let newItem = {
+                            count: 1,
+                            drinkAlert: action.order.name,
+                            hasCombo: false,
+                            name: state.order[drinkToInsertFound].name
+                        }
+
+                        return {
+                            ...state,
+                            order:  [
+                                ...state.order,
+                                newItem
+                            ]
+                        }; 
+                    } else {
+                        state.order[drinkToInsertFound].hasCombo = false; 
+                        state.order[drinkToInsertFound].drinkAlert = action.order.name;
+                
+                        return {
+                            ...state,
+                            order:  [
+                                ...state.order 
+                            ]
+                        };   
+                    }
                 }
             }
 
