@@ -6,7 +6,6 @@ function sizeReducer(state = INITIAL_STATE, action) {
     switch(action.type) {
             
         case 'SET_SIZE': 
-            //console.log('sizeReducer action: ', action.name);
             return {
                 ...state,
                 size: action.name 

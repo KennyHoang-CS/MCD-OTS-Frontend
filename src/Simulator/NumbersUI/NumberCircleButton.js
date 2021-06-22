@@ -1,9 +1,13 @@
 import '../../css/NumberCircleButton.css';
+import { useDispatch } from 'react-redux';
+import { setQuantity } from '../../Redux/actionCreators';
 
 function NumberCircleButton({ number }) {
     
+    const dispatch = useDispatch();
+
     function handleClick(number) {
-        alert(number);
+        dispatch(setQuantity(number));
     }
 
     return (

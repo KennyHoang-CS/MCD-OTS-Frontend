@@ -1,5 +1,5 @@
 import '../../css/SizingBar.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setSize } from '../../Redux/actionCreators';
 
 function SizingButton({ abbreviation, name }) {
@@ -8,9 +8,6 @@ function SizingButton({ abbreviation, name }) {
     
     function handleClick(abbreviation) {
         dispatch(setSize(abbreviation));
-        const buttonStyle = {
-            backgroundColor: '#00308F'
-        };
     }
     
     return (

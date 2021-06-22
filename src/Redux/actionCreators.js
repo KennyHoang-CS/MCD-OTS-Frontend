@@ -40,6 +40,20 @@ export function getSize() {
     };
 }
 
+export function setQuantity(quantity) {
+    
+    return {
+        type: 'SET_QUANTITY',
+        quantity
+    };
+}
+
+export function getQuantity() {
+    return {
+        type: 'SET_QUANTITY'
+    };
+}
+
 function getMenu(actionType, menu) {
     return {
         type: actionType,

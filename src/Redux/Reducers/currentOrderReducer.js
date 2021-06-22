@@ -76,7 +76,12 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
             // Is there an duplicate item? If so, increment the item's count. 
             let found = state.order.findIndex(i => i.name === action.order.name);
             if (found !== -1) {
-                state.order[found].count += 1;
+
+                if (action.order.count !== 1) {
+                    state.order[found].count = action.order.count;
+                } else {
+                    state.order[found].count += action.order.count;
+                }
                 
                 return {
                     ...state,

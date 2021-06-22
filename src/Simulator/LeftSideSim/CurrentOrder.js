@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 function CurrentOrder() {
     
     const orderState = useSelector(state => state.currentOrder.order);    
+    const quantity = useSelector(st => st.quantity.quantity);
     const myOrder = 
         orderState
         .map(
@@ -23,7 +24,7 @@ function CurrentOrder() {
 
     return (
         <div className="Pending-Orders">
-            <h2>Pending Items</h2>
+            <h2>Quantity: {quantity || 0}</h2>
             { myOrder }
         </div>
     )

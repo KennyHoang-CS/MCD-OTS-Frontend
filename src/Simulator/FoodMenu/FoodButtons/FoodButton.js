@@ -1,17 +1,19 @@
 import '../../../css/FoodUI.css';
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
-import { addToCurrentOrder, setSize } from '../../../Redux/actionCreators'
+import { addToCurrentOrder, setSize, setQuantity } from '../../../Redux/actionCreators'
 import { checkItemEligibility, adjustItemName, adjustComboName } from './helpers';
 
 function FoodButton({ name, image, isCombo, sizeable, type, notComboAble }) {
     
     const dispatch = useDispatch();
     let sizeState = useSelector(state => state.size.size, shallowEqual);
+    let quantityState = useSelector(state => state.quantity.quantity, shallowEqual);
     
     function add_to_order(name, isCombo, type) {
+        
         let drinkMsg;
         let itemName;
-    
+
         let itemFailedStatus = checkItemEligibility(isCombo, notComboAble, sizeState, sizeable, type);
 
         if (itemFailedStatus) {
@@ -35,12 +37,13 @@ function FoodButton({ name, image, isCombo, sizeable, type, notComboAble }) {
         
         let newItem = {
             name: itemName,
-            count: 1,
+            count: +quantityState || 1,
             drinkAlert: drinkMsg || '',
-            hasCombo: hasCombo
+            hasCombo: hasCombo,
         };
         dispatch(addToCurrentOrder(newItem));
         dispatch(setSize(''));
+        dispatch(setQuantity(''));
     };
 
     return (
