@@ -15,6 +15,9 @@ function TopBar() {
     
     return (
         <div className="Top-Container">
+            <UserBar />
+            <SpecialBar />
+            <NumbersBar />
             <MenuBar />
             <MenuRoutes />
         </div>

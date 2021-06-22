@@ -16,7 +16,7 @@ function SpecialDrinksMenu() {
     return (
         // render drinks items. 
         <div className="Drink-Container-2">
-            {drinksMenu && drinksMenu.map(food => <DrinkButton name={food.name} image={food.imagesrc}/>)}
+            {drinksMenu && drinksMenu.map(food => <DrinkButton name={food.name} image={food.imagesrc} sizeable={food.sizeable}/>)}
         </div>
     )
 }

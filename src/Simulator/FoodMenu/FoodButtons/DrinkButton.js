@@ -3,13 +3,19 @@ import { addToCurrentOrder, setSize } from '../../../Redux/actionCreators';
 import '../../../css/FoodUI.css';
 import { useEffect } from 'react';
 
-function DrinkButton({ name, image }) {
+function DrinkButton({ name, image, sizeable }) {
     
     const dispatch = useDispatch();
 
     let sizeState = useSelector(state => state.size.size, shallowEqual);
 
     function add_to_order(name) {
+        
+        // magic here 
+        if (!sizeable) {
+            sizeState = '';
+        }
+        
         let newItem = {
             name: `${sizeState || 'M'} ${name}`,
             count: 1,

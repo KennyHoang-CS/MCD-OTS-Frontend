@@ -16,7 +16,7 @@ function Breakfast2Menu() {
     return (
         // render breakfast menu items. 
         <div className="Menu-Container">
-            {breakfastMenu && breakfastMenu.map(food => <FoodButton name={food.name} image={food.imagesrc}/>)}
+            {breakfastMenu && breakfastMenu.map(food => <FoodButton name={food.name} image={food.imagesrc} isCombo={food.is_combo_item} sizeable={food.sizeable} type={food.type} isSoloItem={food.is_solo_item}/>)}
         </div>
     )
 }

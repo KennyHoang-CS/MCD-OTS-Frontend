@@ -8,6 +8,9 @@ function SizingButton({ abbreviation, name }) {
     
     function handleClick(abbreviation) {
         dispatch(setSize(abbreviation));
+        const buttonStyle = {
+            backgroundColor: '#00308F'
+        };
     }
     
     return (

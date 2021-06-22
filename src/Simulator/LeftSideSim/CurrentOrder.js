@@ -23,7 +23,7 @@ function CurrentOrder() {
 
     return (
         <div className="Pending-Orders">
-            <h5>a combo item occurs, add a previous stand-alone drink to it.</h5>
+            <h2>Pending Items</h2>
             { myOrder }
         </div>
     )

@@ -1,27 +1,34 @@
 import '../../../css/FoodUI.css';
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 import { addToCurrentOrder, setSize } from '../../../Redux/actionCreators'
+import { checkItemEligibility, adjustItemName, adjustComboName } from './helpers';
 
-function FoodButton({ name, image, isCombo }) {
+function FoodButton({ name, image, isCombo, sizeable, type, notComboAble }) {
     
     const dispatch = useDispatch();
-
     let sizeState = useSelector(state => state.size.size, shallowEqual);
     
-    function add_to_order(name, isCombo) {
+    function add_to_order(name, isCombo, type) {
         let drinkMsg;
-        let itemName = `${sizeState} ${name}`;
-        let hasCombo = false;  
+        let itemName;
+    
+        let itemFailedStatus = checkItemEligibility(isCombo, notComboAble, sizeState, sizeable, type);
+
+        if (itemFailedStatus) {
+            alert('Option not available.');
+            dispatch(setSize(''));
+            return; 
+        }
+        
+        itemName = adjustItemName(name, sizeState, isCombo, sizeable);
+     
         if(isCombo && sizeState !== '') {
-            if (sizeState === 'L') {
-                sizeState = 'Ml-Lrg';
-            }
-            if (sizeState === 'M') {
-                sizeState = 'Ml-Md';
-            } 
+            sizeState = adjustComboName(sizeState, type);
             drinkMsg = 'Select Medium / Large Drink';
             itemName = `${name} ${sizeState}`;
         }
+        
+        let hasCombo = false; 
         if(sizeState !== '' && isCombo) {
             hasCombo = true;
         }
@@ -37,7 +44,7 @@ function FoodButton({ name, image, isCombo }) {
     };
 
     return (
-        <div className="Food-Button" onClick={() => add_to_order(name, isCombo)}>
+        <div className="Food-Button" onClick={() => add_to_order(name, isCombo, type)}>
             <div className="Food-Content">
                 <p>{ name }</p>
                 <img src={image} alt="Food Pic"></img>
