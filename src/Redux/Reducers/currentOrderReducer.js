@@ -139,7 +139,7 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
                         };
                         
                         if (extraDrinksFlag) {
-                            alert('6666')
+    
                             return {
                                 ...state,
                                 order:  [
@@ -149,7 +149,7 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
                                 ]
                             }; 
                         } else {
-                            alert('777777')
+                            
                             return {
                                 ...state,
                                 order:  [
@@ -161,7 +161,7 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
                     } else {
                         state.order[drinkToInsertFound].hasCombo = false; 
                         state.order[drinkToInsertFound].drinkAlert = action.order.name;
-                        alert('88888')
+                        
                         return {
                             ...state,
                             order:  [
