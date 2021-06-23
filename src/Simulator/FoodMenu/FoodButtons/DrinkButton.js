@@ -1,13 +1,13 @@
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
-import { addToCurrentOrder, setSize } from '../../../Redux/actionCreators';
+import { addToCurrentOrder, setSize, setQuantity } from '../../../Redux/actionCreators';
 import '../../../css/FoodUI.css';
-import { useEffect } from 'react';
 
 function DrinkButton({ name, image, sizeable }) {
     
     const dispatch = useDispatch();
 
     let sizeState = useSelector(state => state.size.size, shallowEqual);
+    let quantityState = useSelector(state => state.quantity.quantity, shallowEqual);
 
     function add_to_order(name) {
         
@@ -18,11 +18,12 @@ function DrinkButton({ name, image, sizeable }) {
         
         let newItem = {
             name: `${sizeState || 'M'} ${name}`,
-            count: 1,
+            count: +quantityState || 1,
             foodType: 'drink'
         };
         dispatch(addToCurrentOrder(newItem));
         dispatch(setSize(''));
+        dispatch(setQuantity(''));
     };
 
     return (
