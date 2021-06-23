@@ -1,9 +1,12 @@
 import '../../css/SpecialUI.css';
 
-function SpecialButton({ name }) {
+function SpecialButton({ name, display }) {
     return (
         <div className="SpecialButton">
-            { name }
+            <div className="SpecialButton-Content">
+                <h3>{ name }</h3>
+                <p>{ display }</p>
+            </div>
         </div>
     )
 }
