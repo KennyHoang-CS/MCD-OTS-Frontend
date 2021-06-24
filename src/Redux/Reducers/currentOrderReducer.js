@@ -51,7 +51,7 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
 
             // add an existing stand-alone drink to a combo. 
             if (action.order.hasCombo === true) {
-                console.log('aaa')
+                //console.log('aaa')
                 // locate the existing stand-alone drink to insert into combo. 
                 let soloDrinkFound = state.order.findIndex( 
                     i => i.foodType === 'drink'
@@ -60,49 +60,85 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
                 // existing stand-alone drink was found if it isn't -1. 
                 
                 if (soloDrinkFound !== -1) {
-                    console.log('bbb')
+                   // console.log('bbb')
 
-                    /*
-                    let flag = true;
-                    let countUpcomingMeals = action.order.count; 
+                // multiple distinct drinks
+                if ((state.distinctDrinks.size >= 1) && action.order.count > 0) {
                     
+                    let countUpcomingMeals = action.order.count; 
+                    let countCurrentDrink; 
                     let tempArr = []; 
-                    while(flag) {
-
-                        if (countUpcomingMeals !== 0) {
-                            tempArr.push(
-                                createItem(
-                                    action.order.name,
-                                    state.order[soloDrinkFound].name,
-                                    1,
-                                    true
-                                )
-                            )
-                            state.order.splice(soloDrinkFound, 1);
-                            --countUpcomingMeals;
-                        }
+                    let isThereExtraDrinks = false;  
+                    let countExtraDrinks; 
+                    let extraDrinks = {
+                        name: '',
+                        count: 0,
+                        foodType: 'drink' 
+                    };
+                
+                    while((state.distinctDrinks.size >= 1) && countUpcomingMeals > 0) {
                         
+                        countCurrentDrink = state.order[soloDrinkFound].count;
+                        const copyCurrentDrinkCount = countCurrentDrink;
+                        state.order[soloDrinkFound].count -= countUpcomingMeals;
+
+                        if (state.order[soloDrinkFound].count <= 0) {
+                            state.order[soloDrinkFound].count = countCurrentDrink;
+                        } 
+
+                        countCurrentDrink = state.order[soloDrinkFound].count;
+                        if (!(countCurrentDrink === copyCurrentDrinkCount)) {
+                            isThereExtraDrinks = true;
+                            countExtraDrinks = countCurrentDrink;
+                            extraDrinks.count = countCurrentDrink;
+                            extraDrinks.name = state.order[soloDrinkFound].name;
+                            extraDrinks.foodType = 'drink';
+                        }
+                        tempArr.push(createItem(
+                            action.order.name,
+                            state.order[soloDrinkFound].name,
+                            countCurrentDrink,
+                            false  
+                        ))
+
+                        if (countCurrentDrink - countUpcomingMeals <= 0) {
+                            state.distinctDrinks.delete(state.order[soloDrinkFound].name);    
+                            state.order.splice(soloDrinkFound, 1);
+                        }
+
+                        countUpcomingMeals -= countCurrentDrink;
+
                         soloDrinkFound = state.order.findIndex( 
                             i => i.foodType === 'drink'
                         );
-
-                        if (soloDrinkFound === -1) flag = false;
+                        
+                    } // end while
+                
+                    if (isThereExtraDrinks) {
+                        return {
+                            ...state,
+                            order: [
+                                ...state.order,
+                                ...tempArr, 
+                                extraDrinks
+                            ]
+                        }
+                    } else {
+                        return {
+                            ...state,
+                            order: [
+                                ...state.order,
+                                ...tempArr
+                            ]
+                        }
                     }
+                }
+                
                     
-                    return {
-                        ...state,
-                        order: [
-                            ...state.order,
-                            ...tempArr
-                        ]
-                    }
-                    */
-
-
-
+                    
                     // 2 drinks of the same vs 3 upcoming combo meals. 
                     if (state.order[soloDrinkFound].count < action.order.count) {
-                        console.log('ccc')
+                        //console.log('ccc')
                         let newCount = action.order.count - state.order[soloDrinkFound].count;
 
                         let newItem = createItem(
@@ -131,14 +167,6 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
                         }
                     }
                     
-                    /*
-                    if (soloDrinkFound !== -1) {
-                        let flag = true;
-                        while(flag) {
-
-                        }
-                    }
-                    */
 
                     // mark it false, since that order combo will have a drink. 
                     action.order.hasCombo = false;
@@ -150,7 +178,7 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
                     if (state.order[soloDrinkFound].count === 1) {
                         state.order.splice(soloDrinkFound, 1);
                     } else {    
-                        console.log('dddd')
+                        //console.log('dddd')
                         // solo drinks > upcoming combo meals: 3 cokes vs 2 meals
                         if (state.order[soloDrinkFound].count >= action.order.count) {
                             state.order[soloDrinkFound].count -= action.order.count;
