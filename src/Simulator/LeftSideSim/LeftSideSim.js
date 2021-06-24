@@ -1,11 +1,11 @@
 import '../../css/LeftSideSim.css';
-import CurrentOrder from './CurrentOrder';
+import PendingItems from './PendingItems';
 
 function LeftSideSim() {
     return (
         <div className="Left-Side-Sim">
             <div className="Current-Items-Container">
-                <CurrentOrder />
+                <PendingItems />
             </div>
             <div className="Mock-Orders-Container">
                 Mock Orders goes here.

@@ -23,6 +23,12 @@
     margin-left: 45px;
 }
 
+.Item-Wrapper2 {
+    background-color: black;
+    color: white; 
+}
+
+
 .Pending-Orders h2 {
     border-bottom: 2px solid black;
     padding-bottom: 10px;

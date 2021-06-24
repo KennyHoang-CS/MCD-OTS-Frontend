@@ -1,26 +1,20 @@
 import { useSelector } from "react-redux";
+import Item from "./Item";
+const { uuid } = require('uuidv4');
 
-function CurrentOrder() {
+function PendingItems() {
     
     const orderState = useSelector(state => state.currentOrder.order);    
     const quantity = useSelector(st => st.quantity.quantity);
+    
     const myOrder = 
         orderState
         .map(
-        item => 
-        
-        <ul className="Item-Wrapper">
-            {item.count} {item.name}
-            <li>
-                {item.drinkAlert}
-            </li>
-        </ul>
-    
+        i => 
+        <Item id={ uuid() } name={ i.name } count={ i.count } drinkAlert={ i.drinkAlert } type={ i.foodType } />
     );
 
     console.log('orderState: ', orderState);
-
-    // order = [ {name, count}, ... ]
 
     return (
         <div className="Pending-Orders">
@@ -30,4 +24,4 @@ function CurrentOrder() {
     )
 }
 
-export default CurrentOrder;
+export default PendingItems;

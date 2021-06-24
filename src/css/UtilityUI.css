@@ -1,0 +1,38 @@
+.Utility-Bar {
+    background-color: black;
+}
+
+.Utility-Button {
+    border-radius: 50%;
+    color: white;
+    background-color: rgba(216, 191, 216);
+    width: 38px; 
+    height: 38px;
+    padding: 15px;
+    margin: 5px;
+    position: relative;
+    font-size: 13px;
+    text-shadow: -1px 1px 0 #000,
+                    1px 1px 0 #000,
+                    1px -1px 0 #000;
+    font-weight: 900;
+}
+
+.Utility-Button:hover {
+    border-radius: 50%;
+    color: white;
+    background-color: rgb(221, 160, 221);
+    width: 38px; 
+    height: 38px;
+    padding: 15px;
+    margin: 5px;
+    position: relative;
+    font-size: 13px;
+    text-shadow: -1px 1px 0 #000,
+                    1px 1px 0 #000,
+                    1px -1px 0 #000;
+    font-weight: 900;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+

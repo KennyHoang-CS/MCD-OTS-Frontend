@@ -54,6 +54,33 @@ export function getQuantity() {
     };
 }
 
+export function toggleItem(name) {
+    return {
+        type: 'TOGGLE_ITEM',
+        name
+    };
+}
+
+export function setCurrentItemDefault() {
+    return {
+        type: 'SET_DEFAULT_VALUES'
+    };
+}
+
+export function removeItem(name) {
+    return {
+        type: 'REMOVE_ITEM_FROM_CURRENT_ORDER',
+        name 
+    }
+}
+
+export function removeDrinkFromMeal(name) {
+    return {
+        type: 'REMOVE_DRINK_FROM_ITEM',
+        name
+    }
+}
+
 function getMenu(actionType, menu) {
     return {
         type: actionType,
