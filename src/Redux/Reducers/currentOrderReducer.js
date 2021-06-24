@@ -69,7 +69,6 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
                     let countCurrentDrink; 
                     let tempArr = []; 
                     let isThereExtraDrinks = false;  
-                    let countExtraDrinks; 
                     let extraDrinks = {
                         name: '',
                         count: 0,
@@ -89,7 +88,6 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
                         countCurrentDrink = state.order[soloDrinkFound].count;
                         if (!(countCurrentDrink === copyCurrentDrinkCount)) {
                             isThereExtraDrinks = true;
-                            countExtraDrinks = countCurrentDrink;
                             extraDrinks.count = countCurrentDrink;
                             extraDrinks.name = state.order[soloDrinkFound].name;
                             extraDrinks.foodType = 'drink';
