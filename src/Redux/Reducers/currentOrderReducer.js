@@ -83,7 +83,26 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
 
                         if (state.order[soloDrinkFound].count <= 0) {
                             state.order[soloDrinkFound].count = countCurrentDrink;
+                            //alert('poop')
                         } 
+                        // Edge Case: 3 cokes and 2 diet cokes vs 2 upcoming meals. 
+                        /*
+                        else if (state.order[soloDrinkFound].count > 0) {
+                            alert('haha xd')
+                            return {
+                                ...state,
+                                order: [
+                                    ...state.order,
+                                    createItem(
+                                        action.order.name,
+                                        state.order[soloDrinkFound].name,
+                                        countUpcomingMeals,
+                                        false
+                                    )
+                                ]
+                            }
+                        }
+                        */
 
                         countCurrentDrink = state.order[soloDrinkFound].count;
                         if (!(countCurrentDrink === copyCurrentDrinkCount)) {
