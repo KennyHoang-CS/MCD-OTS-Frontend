@@ -1,15 +1,15 @@
 const INITIAL_STATE = {
     cssFlag: false,
     className: '',
-    name: ''
+    id: ''
 }; 
 
 function currentItemReducer(state = INITIAL_STATE, action) {
     switch(action.type) {
         case 'TOGGLE_ITEM':
-            
+        
             state.cssFlag = !state.cssFlag; 
-            state.name = action.name; 
+            state.id = action.id;
 
             if (state.cssFlag === false) {
                 state.className = 'Item-Wrapper';
@@ -25,7 +25,7 @@ function currentItemReducer(state = INITIAL_STATE, action) {
             
             state.cssFlag = false;
             state.className = '';
-            state.name = '';
+            state.id = '';
 
             return {
                 ...state  

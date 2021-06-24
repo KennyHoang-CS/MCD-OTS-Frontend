@@ -3,13 +3,13 @@ import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 import { addToCurrentOrder, setSize, setQuantity } from '../../../Redux/actionCreators'
 import { checkItemEligibility, adjustItemName, adjustComboName } from './helpers';
 
-function FoodButton({ name, image, isCombo, sizeable, type, notComboAble }) {
+function FoodButton({ id, name, image, isCombo, sizeable, type, notComboAble }) {
     
     const dispatch = useDispatch();
     let sizeState = useSelector(state => state.size.size, shallowEqual);
     let quantityState = useSelector(state => state.quantity.quantity, shallowEqual);
     
-    function add_to_order(name, isCombo, type) {
+    function add_to_order(name, isCombo, type, id) {
         
         let drinkMsg;
         let itemName;
@@ -40,6 +40,7 @@ function FoodButton({ name, image, isCombo, sizeable, type, notComboAble }) {
             count: +quantityState || 1,
             drinkAlert: drinkMsg || '',
             hasCombo: hasCombo,
+            id
         };
         dispatch(addToCurrentOrder(newItem));
         dispatch(setSize(''));
@@ -47,7 +48,7 @@ function FoodButton({ name, image, isCombo, sizeable, type, notComboAble }) {
     };
 
     return (
-        <div className="Food-Button" onClick={() => add_to_order(name, isCombo, type)}>
+        <div className="Food-Button" onClick={() => add_to_order(name, isCombo, type, id)}>
             <div className="Food-Content">
                 <p>{ name }</p>
                 <img src={image} alt="Food Pic"></img>

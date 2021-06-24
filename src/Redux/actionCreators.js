@@ -54,10 +54,10 @@ export function getQuantity() {
     };
 }
 
-export function toggleItem(name) {
+export function toggleItem(id) {
     return {
         type: 'TOGGLE_ITEM',
-        name
+        id
     };
 }
 
@@ -67,17 +67,17 @@ export function setCurrentItemDefault() {
     };
 }
 
-export function removeItem(name) {
+export function removeItem(id) {
     return {
         type: 'REMOVE_ITEM_FROM_CURRENT_ORDER',
-        name 
+        id
     }
 }
 
-export function removeDrinkFromMeal(name) {
+export function removeDrinkFromMeal(id) {
     return {
         type: 'REMOVE_DRINK_FROM_ITEM',
-        name
+        id
     }
 }
 

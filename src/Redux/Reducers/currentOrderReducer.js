@@ -1,5 +1,5 @@
 import { createItem } from '../reduxHelpers';
-
+import { uuid } from 'uuidv4';
 
 const INITIAL_STATE = {
     order: [],
@@ -15,15 +15,16 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
             }
 
         case 'REMOVE_ITEM_FROM_CURRENT_ORDER': 
-            let itemTodelete = action.name; 
+        
+            let itemTodelete = action.id; 
             return {
                 ...state,
-                order: state.order.filter(item => item.name !== itemTodelete)
+                order: state.order.filter(item => item.id !== itemTodelete)
             }
 
         case 'REMOVE_DRINK_FROM_ITEM':
-           
-            let itemLocation = state.order.findIndex(item => item.name === action.name) 
+
+            let itemLocation = state.order.findIndex(item => item.id === action.id) 
             let drinkMsg = 'Select Medium / Large Drink';
         
             if (state.order[itemLocation].foodType === 'drink' || state.order[itemLocation].drinkAlert === '') {
@@ -83,7 +84,6 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
 
                         if (state.order[soloDrinkFound].count <= 0) {
                             state.order[soloDrinkFound].count = countCurrentDrink;
-                            //alert('poop')
                         } 
                         // Edge Case: 3 cokes and 2 diet cokes vs 2 upcoming meals. 
                         /*
@@ -115,7 +115,8 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
                             action.order.name,
                             state.order[soloDrinkFound].name,
                             countCurrentDrink,
-                            false  
+                            false,
+                            uuid() 
                         ))
 
                         if (countCurrentDrink - countUpcomingMeals <= 0) {
@@ -162,14 +163,16 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
                             action.order.name, 
                             state.order[soloDrinkFound].name,
                             state.order[soloDrinkFound].count,
-                            false
+                            false,
+                            uuid()
                         );
 
                         let extraItem = createItem(
                             action.order.name,
                             action.order.drinkAlert,
                             newCount,
-                            true
+                            true,
+                            uuid()
                         );
                         
                         state.order.splice(soloDrinkFound, 1);
@@ -303,7 +306,8 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
                             name: currentStateName,
                             drinkAlert: action.order.name,
                             count: newStateCount || action.order.count,
-                            hasCombo: false
+                            hasCombo: false,
+                            id: uuid()
                         };
 
                         // create the new item that contains the extra drinks. 
@@ -412,13 +416,13 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
             // does not exist in order. 
             if (action.order.foodType === 'drink') {
                 state.distinctDrinks.add(action.order.name); 
-                //alert(state.distinctDrinks.size)
-                //alert('DRINKS LOL');
             }
+        
             return {
                 ...state,
                 order: [
-                    ...state.order, action.order
+                    ...state.order, 
+                    action.order
                 ]
             }
         default: 

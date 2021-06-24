@@ -5,7 +5,7 @@ import { removeItem, removeDrinkFromMeal, setCurrentItemDefault } from '../../..
 export default function UtilityButton({ name }) {
 
     const dispatch = useDispatch(); 
-    const itemNameState = useSelector(st => st.currentItem.name);
+    const itemIdState = useSelector(st => st.currentItem.id, shallowEqual);
 
     function handleClick(name) {
         if (name === 'Clear Choice') clearChoice(); 
@@ -13,12 +13,12 @@ export default function UtilityButton({ name }) {
     }
 
     function clearChoice() {
-        dispatch(removeDrinkFromMeal(itemNameState));
+        dispatch(removeDrinkFromMeal(itemIdState));
     }
 
     function voidItem() {
+        dispatch(removeItem(itemIdState));
         dispatch(setCurrentItemDefault());
-        dispatch(removeItem(itemNameState));
     }
 
     return (

@@ -1,9 +1,10 @@
 
-export function createItem(name, drinkAlert, count, hasCombo) {
+export function createItem(name, drinkAlert, count, hasCombo, id) {
     return {
         name,
         drinkAlert,
         count,
-        hasCombo
+        hasCombo,
+        id
     }
 } 
