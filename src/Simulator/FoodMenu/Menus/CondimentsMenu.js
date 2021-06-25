@@ -3,6 +3,7 @@ import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { fetchMenuFromAPI } from '../../../Redux/actionCreators';
 import FoodButton from "../FoodButtons/FoodButton";
 import '../../../css/MenuUI.css';
+import { uuid } from 'uuidv4';
 
 function CondimentsMenu() {
     
@@ -16,7 +17,7 @@ function CondimentsMenu() {
     return (
         // render breakfast menu items. 
         <div className="Menu-Container">
-            {menu && menu.map(food => <FoodButton name={food.name} image={food.imagesrc}/>)}
+            {menu && menu.map(food => <FoodButton id={uuid()} name={food.name} image={food.imagesrc}/>)}
         </div>
     )
 }

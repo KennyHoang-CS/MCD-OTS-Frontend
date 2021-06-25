@@ -43,6 +43,9 @@ function MenuRoutes() {
                         <BreakfastMenu />
                         <DrinksMenu />
                     </div>
+                    <div>
+                        <UtilityBar />
+                    </div>
                 </div>
             </Route>
             <Route exact path="/breakfast-2">
@@ -53,6 +56,9 @@ function MenuRoutes() {
                     <div className="Menu-Subcontent-Container">
                         <Breakfast2Menu />
                         <DrinksMenu />
+                    </div>
+                    <div>
+                        <UtilityBar />
                     </div>
                 </div>
             </Route>
@@ -65,6 +71,9 @@ function MenuRoutes() {
                         <LunchMenu />
                         <DrinksMenu />
                     </div>
+                    <div>
+                        <UtilityBar />
+                    </div>
                 </div>
             </Route>
             <Route exact path="/lunch-2">
@@ -75,6 +84,9 @@ function MenuRoutes() {
                     <div className="Menu-Subcontent-Container">
                         <Lunch2Menu />
                         <DrinksMenu />
+                    </div>
+                    <div>
+                        <UtilityBar />
                     </div>
                 </div>
             </Route>
@@ -87,6 +99,9 @@ function MenuRoutes() {
                         <McValueMenu />
                         <DrinksMenu />
                     </div>
+                    <div>
+                        <UtilityBar />
+                    </div>
                 </div>
             </Route>
             <Route exact path="/salad">
@@ -97,6 +112,9 @@ function MenuRoutes() {
                     <div className="Menu-Subcontent-Container">
                         <SaladMenu />
                         <DrinksMenu />
+                    </div>
+                    <div>
+                        <UtilityBar />
                     </div>
                 </div>
             </Route>
@@ -109,6 +127,9 @@ function MenuRoutes() {
                         <SpecialDrinksMenu />
                         <DrinksMenu />
                     </div>
+                    <div>
+                        <UtilityBar />
+                    </div>
                 </div>
             </Route>
             <Route exact path="/mccafe">
@@ -118,6 +139,9 @@ function MenuRoutes() {
                     </div>
                     <div className="Menu-Subcontent-Container">
                         <McCafeMenu />
+                    </div>
+                    <div>
+                        <UtilityBar />
                     </div>
                 </div>
             </Route>
@@ -129,6 +153,9 @@ function MenuRoutes() {
                     <div className="Menu-Subcontent-Container">
                         <DessertMenu />
                     </div>
+                    <div>
+                        <UtilityBar />
+                    </div>
                 </div>
             </Route>
             <Route exact path="/dessert-2">
@@ -139,6 +166,9 @@ function MenuRoutes() {
                     <div className="Menu-Subcontent-Container">
                         <Dessert2Menu />
                     </div>
+                    <div>
+                        <UtilityBar />
+                    </div>
                 </div>
             </Route>
             <Route exact path="/happy meal">
@@ -148,6 +178,9 @@ function MenuRoutes() {
                     </div>
                     <div className="Menu-Subcontent-Container">
                         <HappyMealMenu />
+                    </div>
+                    <div>
+                        <UtilityBar />
                     </div>
                 </div>
             </Route>
@@ -168,6 +201,9 @@ function MenuRoutes() {
                     </div>
                     <div className="Menu-Subcontent-Container">
                         <CondimentsMenu />
+                    </div>
+                    <div>
+                        <UtilityBar />
                     </div>
                 </div>
             </Route>

@@ -3,7 +3,7 @@ import { addToCurrentOrder, setSize } from '../../../Redux/actionCreators'
 import { checkDessertSizeEligibility } from './helpers';
 import '../../../css/FoodUI.css';
 
-function DessertButton({ name, image }) {
+function DessertButton({ name, image, id }) {
     
     const dispatch = useDispatch();
     let sizeState = useSelector(state => state.size.size, shallowEqual);
@@ -20,14 +20,15 @@ function DessertButton({ name, image }) {
         
         let newItem = {
             name,
-            count: 1
+            count: 1,
+            id
         };
         dispatch(addToCurrentOrder(newItem));
         dispatch(setSize(''));
     };
 
     return (
-        <div className="Dessert-Button" onClick={() => add_to_order(name)}>
+        <div className="Dessert-Button" onClick={() => add_to_order(name, id)}>
             <div className="Dessert-Content">
                 <p>{ name }</p>
                 <img src={image} alt="Food Pic"></img>

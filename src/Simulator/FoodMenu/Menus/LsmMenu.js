@@ -3,6 +3,7 @@ import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { fetchMenuFromAPI } from '../../../Redux/actionCreators';
 import LsmButton from "../FoodButtons/LsmButton";
 import '../../../css/MenuUI.css';
+import { uuid } from 'uuidv4';
 
 function LsmMenu() {
     
@@ -16,7 +17,7 @@ function LsmMenu() {
     return (
         // render breakfast menu items. 
         <div className="LSM-Menu-Container">
-            {menu && menu.map(food => <LsmButton name={food.name} image={food.imagesrc}/>)}
+            {menu && menu.map(food => <LsmButton id={uuid()} name={food.name} image={food.imagesrc}/>)}
         </div>
     )
 }

@@ -2,6 +2,7 @@ import '../../../css/FoodUI.css';
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 import { addToCurrentOrder, setSize, setQuantity } from '../../../Redux/actionCreators'
 import { checkItemEligibility, adjustItemName, adjustComboName } from './helpers';
+import { uuid } from 'uuidv4';
 
 function FoodButton({ id, name, image, isCombo, sizeable, type, notComboAble }) {
     
@@ -40,7 +41,7 @@ function FoodButton({ id, name, image, isCombo, sizeable, type, notComboAble }) 
             count: +quantityState || 1,
             drinkAlert: drinkMsg || '',
             hasCombo: hasCombo,
-            id,
+            id: uuid(),
             type,
             comboSize: sizeState
         };
