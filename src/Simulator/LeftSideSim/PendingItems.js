@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 import Item from "./Item";
-import { uuid } from 'uuidv4';
 
 function PendingItems() {
     
@@ -11,7 +10,7 @@ function PendingItems() {
         orderState
         .map(
         i => 
-        <Item id={ i.id } name={ i.name } count={ i.count } drinkAlert={ i.drinkAlert } type={ i.foodType } />
+        <Item id={ i.id } name={ i.name } count={ i.count } drinkAlert={ i.drinkAlert } type={ i.foodType || i.type } comboSize ={ i.comboSize }/>
     );
 
     console.log('orderState: ', orderState);

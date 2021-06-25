@@ -40,8 +40,11 @@ function FoodButton({ id, name, image, isCombo, sizeable, type, notComboAble }) 
             count: +quantityState || 1,
             drinkAlert: drinkMsg || '',
             hasCombo: hasCombo,
-            id
+            id,
+            type,
+            comboSize: sizeState
         };
+
         dispatch(addToCurrentOrder(newItem));
         dispatch(setSize(''));
         dispatch(setQuantity(''));

@@ -16,11 +16,19 @@
     background-color: lightcoral;
 }
 
-.Item-Wrapper li {
-    list-style: none;
+.Item-Drink  {
     color: red;
     font-size: small;
-    margin-left: 45px;
+    transform: translateX(-10px);
+}
+
+.Item-Drink2  {
+    font-size: small;
+    transform: translateX(-10px);
+}
+
+.Item-Side {
+    transform: translateX(-15px);
 }
 
 .Item-Wrapper2 {
@@ -28,6 +36,14 @@
     color: white; 
 }
 
+.Pending-Orders {
+    color: black;
+}
+
+.Pending-Orders li {
+    list-style: none;
+    margin-left: 15px;
+}
 
 .Pending-Orders h2 {
     border-bottom: 2px solid black;

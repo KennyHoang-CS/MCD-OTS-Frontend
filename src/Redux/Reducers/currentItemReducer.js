@@ -1,6 +1,6 @@
 const INITIAL_STATE = {
     cssFlag: false,
-    className: '',
+    className: '.Item-Wrapper .Item-Wrapper li',
     id: ''
 }; 
 
