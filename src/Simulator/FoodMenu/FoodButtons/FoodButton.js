@@ -4,7 +4,7 @@ import { addToCurrentOrder, setSize, setQuantity } from '../../../Redux/actionCr
 import { checkItemEligibility, adjustItemName, adjustComboName } from './helpers';
 import { uuid } from 'uuidv4';
 
-function FoodButton({ id, name, image, isCombo, sizeable, type, notComboAble }) {
+function FoodButton({ id, name, image, isCombo, sizeable, type, notComboAble, comboNumber, flag }) {
     
     const dispatch = useDispatch();
     let sizeState = useSelector(state => state.size.size, shallowEqual);
@@ -55,7 +55,10 @@ function FoodButton({ id, name, image, isCombo, sizeable, type, notComboAble }) 
         <div className="Food-Button" onClick={() => add_to_order(name, isCombo, type, id)}>
             <div className="Food-Content">
                 <p>{ name }</p>
-                <img src={image} alt="Food Pic"></img>
+                <div className="Food-Body">
+                    <img src={ image } alt="Food Pic"></img>
+                    {(comboNumber !== '999' && flag !== 'sauce') && <div>{ comboNumber }</div>}
+                </div>
             </div>
         </div>
     )

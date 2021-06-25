@@ -8,16 +8,27 @@ import { uuid } from 'uuidv4';
 function Breakfast2Menu() {
     
     const dispatch = useDispatch();
-    const breakfastMenu = useSelector(state => state.breakfast2.menu, shallowEqual);
+    const menu = useSelector(state => state.breakfast2.menu, shallowEqual);
 
     useEffect(() => {
         dispatch(fetchMenuFromAPI('LOAD_BREAKFAST2_MENU', 'breakfast-2'))
     }, [dispatch]);
         
     return (
-        // render breakfast menu items. 
+        // Render items for breakfast 2 menu. 
         <div className="Menu-Container">
-            {breakfastMenu && breakfastMenu.map(food => <FoodButton id={food.id} name={food.name} image={food.imagesrc} isCombo={food.is_combo_item} sizeable={food.sizeable} type={food.type} isSoloItem={food.is_solo_item}/>)}
+            {menu && menu.map(
+                food => <FoodButton 
+                    id={uuid()} 
+                    name={food.name} 
+                    image={food.imagesrc} 
+                    isCombo={food.is_combo_item} 
+                    sizeable={food.sizeable} 
+                    type={food.type} 
+                    notComboAble={food.not_combo_able}
+                    comboNumber={food.combo_item_number}
+                />)
+            }
         </div>
     )
 }

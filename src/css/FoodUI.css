@@ -40,6 +40,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    position: relative;
 }
 
 
@@ -49,6 +50,20 @@
     margin: 0;
     color: white;
     font-weight: 900;
+}
+
+.Food-Body {
+    position: relative;
+}
+
+.Food-Body div {
+    position: absolute;
+    transform: translateY(-25px);
+    font-weight: 900;
+    height: 0;
+    width: 0;
+    border-bottom: 20px solid yellow;
+    border-right: 30px solid  transparent;
 }
 
 .Dessert-Content p {

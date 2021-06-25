@@ -20,7 +20,18 @@ function LunchMenu() {
     return (
         // Render items for lunch 1 menu. 
         <div className="Menu-Container">
-            {menu && menu.map(food => <FoodButton id={uuid()} name={food.name} image={food.imagesrc} isCombo={food.is_combo_item} sizeable={food.sizeable} type={food.type} notComboAble={food.not_combo_able}/>)}
+            {menu && menu.map(
+                food => <FoodButton 
+                    id={uuid()} 
+                    name={food.name} 
+                    image={food.imagesrc} 
+                    isCombo={food.is_combo_item} 
+                    sizeable={food.sizeable} 
+                    type={food.type} 
+                    notComboAble={food.not_combo_able}
+                    comboNumber={food.combo_item_number}
+                />)
+            }
         </div>
     )
 }
