@@ -17,6 +17,8 @@ import currentOrderReducer from './currentOrderReducer';
 import sizeReducer from './sizeReducer';
 import quantityReducer from './quantityReducer';
 import currentItemReducer from './currentItemReducer';
+import customersReducer from './customersReducer';
+import gameReducer from './gameReducer';
 
 const rootReducer = combineReducers({ 
     breakfast: breakfastReducer, 
@@ -36,7 +38,9 @@ const rootReducer = combineReducers({
     currentOrder: currentOrderReducer,
     size: sizeReducer,
     quantity: quantityReducer,
-    currentItem: currentItemReducer
+    currentItem: currentItemReducer,
+    customers: customersReducer,
+    game: gameReducer
 });
 
 export default rootReducer; 

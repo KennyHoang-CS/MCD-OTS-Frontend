@@ -1,0 +1,26 @@
+
+.Customer-Container {
+    margin-top: 3.5vh;
+}
+
+.Customer-Header {
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+}
+
+.Customer-Header p {
+    margin-left: 20px;
+    margin-top: 5vh;
+}
+
+.Customer-Container img {
+    width: 100px;
+    height: 100px;
+}
+
+.Customer-Order {
+    margin-left: 25px;
+    margin-right: 25px;
+    font-weight: 600;
+}

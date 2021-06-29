@@ -42,7 +42,11 @@ export function adjustItemName(name, sizeState, isCombo, sizeable) {
     
     let itemName; 
     if (isCombo || sizeable) {
-        itemName = `${sizeState} ${name}`;
+        if (sizeable) {
+            itemName = `${sizeState} ${name}`;
+        } else {
+            itemName = `${name}`;
+        }
     } else {
         itemName = `${name}`;
     }

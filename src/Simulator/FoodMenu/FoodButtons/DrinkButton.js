@@ -9,15 +9,20 @@ function DrinkButton({ id, name, image, sizeable }) {
     let sizeState = useSelector(state => state.size.size, shallowEqual);
     let quantityState = useSelector(state => state.quantity.quantity, shallowEqual);
 
-    function add_to_order(name, id) {
+    function add_to_order(name, id, sizeable) {
         
+        let drinkName; 
+
         // magic here 
         if (!sizeable) {
             sizeState = '';
+            drinkName = name; 
+        } else {
+            drinkName = `${sizeState || 'M'} ${name}`;
         }
         
         let newItem = {
-            name: `${sizeState || 'M'} ${name}`,
+            name: drinkName,
             count: +quantityState || 1,
             foodType: 'drink',
             id
@@ -28,7 +33,7 @@ function DrinkButton({ id, name, image, sizeable }) {
     };
 
     return (
-        <div className="Drink-Button" onClick={() => add_to_order(name, id)}>
+        <div className="Drink-Button" onClick={() => add_to_order(name, id, sizeable)}>
             <div className="Drink-Content">
                 <p>{ name }</p>
                 <img src={image} alt="Drink Pic"></img>

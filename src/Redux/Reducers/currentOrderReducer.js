@@ -14,6 +14,13 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
                 ...state, order: action.order
             }
 
+        case 'CLEAR_CURRENT_ORDER':
+            return {
+                ...state,
+                order: [],
+                distinctDrinks: new Set()
+            }
+
         case 'REMOVE_ITEM_FROM_CURRENT_ORDER': 
         
             let itemTodelete = action.id; 

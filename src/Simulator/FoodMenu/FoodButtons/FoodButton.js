@@ -14,7 +14,7 @@ function FoodButton({ id, name, image, isCombo, sizeable, type, notComboAble, co
         
         let drinkMsg;
         let itemName;
-
+        
         let itemFailedStatus = checkItemEligibility(isCombo, notComboAble, sizeState, sizeable, type);
 
         if (itemFailedStatus) {
