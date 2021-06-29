@@ -4,10 +4,9 @@ import Customers from './Customers/Customers';
 import Timer from './Customers/Timer';
 import { useSelector, shallowEqual } from 'react-redux';
 
-function LeftSideSim() {
+function LeftSideSim({ myLocation }) {
     
     let gameStatus = useSelector(state => state.game.gameStatus, shallowEqual);
-    let getTime = useSelector(state => state.game.time, shallowEqual);
 
     return (
         <div className="Left-Side-Sim">
@@ -15,7 +14,7 @@ function LeftSideSim() {
                 <PendingItems />
             </div>
             <div className="Mock-Orders-Container">
-                <h3>Timer is: {getTime}</h3>
+                {!gameStatus && <button className="Leaderboard-Btn" onClick={myLocation}>Leaderboard</button>}
                 {gameStatus && <Timer /> }
                 <Customers />
             </div>

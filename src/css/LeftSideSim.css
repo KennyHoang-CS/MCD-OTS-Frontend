@@ -49,3 +49,43 @@
     border-bottom: 2px solid black;
     padding-bottom: 10px;
 }
+
+.Leaderboard-Btn {
+    margin: 0 5px;
+    padding: 10px;
+    background-color: rgba(0, 0, 255, 0.7);
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+    margin-bottom: 15px;
+    margin-top: 7vh;
+}
+
+.Leaderboard-Btn:hover {
+    margin: 0 5px;
+    padding: 10px;
+    background-color: rgba(0, 0, 245, 0.6);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 15px;
+    margin-top: 7vh;
+}
+
+.Customer-Start-Btn {
+    margin: 0 5px;
+    padding: 10px;
+    background-color: rgba(220, 20, 60);
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+}
+
+.Customer-Start-Btn:hover {
+    margin: 0 5px;
+    padding: 10px;
+    background-color: rgba(220, 20, 60, 0.6);
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+}

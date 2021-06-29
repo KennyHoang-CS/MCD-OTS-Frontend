@@ -15,8 +15,8 @@
 }
 
 .Customer-Container img {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
 }
 
 .Customer-Order {
@@ -24,3 +24,39 @@
     margin-right: 25px;
     font-weight: 600;
 }
+
+.User-Form {
+    margin-bottom: 25px;
+}
+
+.Form-Wrapper .Form-Submit-Btn, .Submit-Order-Btn {
+    margin: 0 5px;
+    padding: 5px;
+    background-color: rgba(0, 0, 255, 0.7);
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+}
+
+.Form-Wrapper .Form-Submit-Btn:hover, .Submit-Order-Btn:hover {
+    margin: 0 5px;
+    padding: 5px;
+    background-color: rgba(0, 0, 245, 0.6);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+input{
+    padding: 5px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label{
+    font-weight: bold;
+}
+

@@ -14,17 +14,17 @@ export function fetchMenuFromAPI(actionType, menu) {
     };
 }
 
-export function updateLeaderboard(actionType, menu) {
+export function updateLeaderboard(newUser, time, formattedTime) {
     
     let myData = {
-        username: 'Kenny',
-        time: 999
+        username: newUser,
+        time,
+        formattedTime
     };
     
     return async function(dispatch) {
         try {
-            let res = await axios.post(`${BASE_URL}/${menu}`, {data: myData});
-            dispatch(getMenu(actionType, res.data.items));
+            await axios.post(`${BASE_URL}/leaderboard/new`, {data: myData});
         } 
         
         catch (err) {
@@ -113,6 +113,13 @@ export function toggleGameStatus(flag) {
     }
 }
 
+export function setGamePlayed(flag) {
+    return {
+        type: 'SET_GAME_PLAYED',
+        flag
+    }
+}
+
 export function loadAnswers() {
     return {
         type: 'LOAD_ANSWERS'
@@ -132,23 +139,22 @@ export function resetCurrentOrder() {
     }
 }
 
-export function incrementCorrectOrder() {
+export function resetGame() {
     return {
-        type: 'INCREMENT_CORRECT_ORDER'
-    }
-}
-
-export function incrementWrongOrder() {
-    return {
-        type: 'INCREMENT_WRONG_ORDER'
+        type: 'RESET_GAME'
     }
 }
 
 export function setTimeRedux(time) {
-    console.log("ACTION CREATOR TIME IS: ", time);
-    //console.log(typeof(time))
     return {
         type: 'SET_TIME',
+        time
+    }
+}
+
+export function setFormattedTime(time) {
+    return {
+        type: 'SET_FORMATTED_TIME',
         time
     }
 }

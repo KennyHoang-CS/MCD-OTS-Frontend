@@ -2,9 +2,9 @@
 const INITIAL_STATE = {
     customerIdx: -1,
     gameStatus: false,
-    correctOrders: 0,
-    wrongOrders: 0,
-    time: 0
+    time: 0,
+    formattedTime: '',
+    gamePlayed: false 
 }; 
 
 function gameReducer(state = INITIAL_STATE, action) {
@@ -25,28 +25,38 @@ function gameReducer(state = INITIAL_STATE, action) {
             return {
                 ...state 
             }
+    
+        case 'SET_GAME_PLAYED':
 
-        case 'INCREMENT_CORRECT_ORDER': 
+            state.gamePlayed = action.flag;
 
-            ++state.correctOrders; 
+            return {
+                ...state 
+            }
+
+        case 'SET_TIME': 
+
+            state.time = action.time;
 
             return {
                 ...state
             }
 
-        case 'INCREMENT_WRONG_ORDER':
+        case 'SET_FORMATTED_TIME': 
 
-            ++state.wrongOrders;
+            state.formattedTime = action.formattedTime;
 
             return {
-                ...state 
+                ...state
             }
-    
-        case 'SET_TIME': 
 
-            console.log('action time: ', action)
+        case 'RESET_GAME': 
+            
+            state.customerIdx = -1;
+            state.gameStatus = false;
+            state.correctOrders = 0;
+            state.wrongOrders = 0;
 
-            state.time = action.time;
 
             return {
                 ...state

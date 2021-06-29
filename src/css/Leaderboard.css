@@ -1,0 +1,56 @@
+
+.Leaderboard-Container a{
+    font-size: 25px;
+    color: blue;
+}
+
+.Leaderboard-Container a:hover {
+    font-size: 25px;
+    color: red;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.Leaderboard {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin: 0 20%;
+    border: 3px solid black;
+    padding-bottom: 4%;
+}
+
+.Leaderboard-Content {
+    margin: 0 4vw;
+    font-weight: 900;
+}
+
+.Leaderboard-Headings {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Leaderboard-Headings h2{
+    border-bottom: 2px solid black;
+}
+
+.Leaderboard-User {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid black;
+}
+
+.Leaderboard-Ranking {
+    margin-left: 4%;
+    font-size: 20px;
+}
+
+.Leaderboard-Username {
+    margin-left: 1%;
+    font-size: 20px;
+}
+
+.Leaderboard-Time {
+    margin-right: 8%;
+    font-size: 20px;
+}
