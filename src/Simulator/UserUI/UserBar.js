@@ -3,6 +3,11 @@ import UserIcon from './UserIcon';
 
 function UserBar() {
 
+    let today = new Date(),
+
+    date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+    let time = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+
     return (
         <div className="User-Bar-Container">
             <div className="User-Content">
@@ -11,10 +16,10 @@ function UserBar() {
             </div>
             <div>
             <div className="User-Top">
-                <p>00:00</p>
+                <p>{time}</p>
                 <p className="User-Top-White-Box"></p>
-                <p>Kenny Hoang is awesome</p>
-                <p>06/08/2021 19:50:47</p>
+                <p>https://www.linkedin.com/in/kennyhoang-cs/</p>
+                <p>{date}</p>
             </div>
             <div className="User-Bottom">
                 <p></p>
