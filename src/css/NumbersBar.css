@@ -1,7 +1,16 @@
 
 .NumbersBar {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     transform: translateY(-3px);
+}
+
+.Left-Numbers {
+    display: flex;
+}
+
+.Right-Numbers {
+    display: flex;
 }
 
 @media only screen and (max-width: 600px) {

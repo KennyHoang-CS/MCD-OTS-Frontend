@@ -52,17 +52,6 @@
     font-weight: 900;
 }
 
-@media only screen and (max-width: 600px) {
-    .Food-Content p, .Drink-Content p, .Dessert-Content p, .LSM-Content p {
-        width: 12.7vw;
-        font-size: 9px;
-        margin: 0;
-        color: white;
-        font-weight: 900;
-    }
-
-}
-
 .Food-Body {
     position: relative;
 }
@@ -106,3 +95,13 @@
     margin-top: 12px;
 }
 
+@media only screen and (max-width: 600px) {
+    .Food-Content p, .Drink-Content p, .Dessert-Content p, .LSM-Content p {
+        width: 12.7vw;
+        font-size: 9px;
+        margin: 0;
+        color: white;
+        font-weight: 900;
+    }
+
+}
