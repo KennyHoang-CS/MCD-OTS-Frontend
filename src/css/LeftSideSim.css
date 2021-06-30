@@ -12,6 +12,15 @@
     overflow: scroll;
 }
 
+@media only screen and (max-width: 600px) {
+    .Left-Side-Sim {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.2fr 1fr;
+    }
+}
+
+
 .Mock-Orders-Container {
     background-color: lightcoral;
 }

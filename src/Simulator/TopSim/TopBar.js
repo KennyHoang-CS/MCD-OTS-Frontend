@@ -4,12 +4,7 @@ import MenuBar from '../Menu/MenuBar';
 import SpecialBar from '../SpecialUI/SpecialBar';
 import UserBar from '../UserUI/UserBar';
 import MenuRoutes from '../FoodMenu/MenuRoutes/MenuRoutes';
-
-/*
-<UserBar />
-<SpecialBar />
-<NumbersBar />
-*/        
+    
 
 function TopBar() {
     

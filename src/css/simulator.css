@@ -6,3 +6,13 @@
     grid-template-rows: 100vh;
 }
 
+@media only screen and (max-width: 600px) {
+    .Simulator-Container {
+        background-color: #ccc;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100vh;
+        justify-content: center;
+    }
+    
+}

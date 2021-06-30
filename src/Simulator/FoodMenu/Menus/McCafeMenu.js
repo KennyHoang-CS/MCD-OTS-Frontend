@@ -16,7 +16,7 @@ function McCafeMenu() {
         
     return (
         // render breakfast menu items. 
-        <div className="Menu-Container">
+        <div className="McCafe-Container">
             {menu && menu.map(d => <DrinkButton id={uuid()} name={d.name} image={d.imagesrc} isCombo={d.is_combo_item} sizeable={d.sizeable} type={d.type}/>)}
         </div>
     )

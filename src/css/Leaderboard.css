@@ -1,4 +1,3 @@
-
 .Leaderboard-Container a{
     font-size: 25px;
     color: blue;
@@ -17,8 +16,9 @@
     justify-content: center;
     margin: 0 20%;
     border: 3px solid black;
-    padding-bottom: 4%;
+    padding-bottom: 6%;
 }
+
 
 .Leaderboard-Content {
     margin: 0 4vw;
@@ -54,3 +54,49 @@
     margin-right: 8%;
     font-size: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+
+    .Leaderboard-Container h1 {
+        font-size: 20px;
+    }
+
+    .Leaderboard {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        margin: 0 10%;
+        border: 3px solid black;
+        padding-bottom: 6%;
+    }
+    
+
+    .Leaderboard-Ranking {
+        margin-left: 4%;
+        font-size: 15px;
+    }
+    
+    .Leaderboard-Username {
+        margin-left: 1%;
+        font-size: 15px;
+    }
+    
+    .Leaderboard-Time {
+        margin-right: 8%;
+        font-size: 15px;
+    }
+
+    .Leaderboard-Headings h2{
+        border-bottom: 2px solid black;
+        font-size: 16px;
+    }
+
+    .Leaderboard-User {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 3px solid black;
+        font-weight: 900;
+    }
+    
+}
+

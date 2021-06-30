@@ -2,11 +2,17 @@ import NumberCircleButton from './NumberCircleButton';
 
 function NumbersBar() {
 
-    let numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8'];
+    let leftNumbers = ['0', '1', '2', '3', '4'];
+    let rightNumbers = ['5', '6', '7', '8', '9'];
     
     return (
         <div className="NumbersBar">
-            {numbers.map(n => <NumberCircleButton number={n} />)}
+            <div className="Left-Numbers">
+                {leftNumbers.map(n => <NumberCircleButton number={n} />)}
+            </div>
+            <div className="Right-Numbers">
+                {rightNumbers.map(n => <NumberCircleButton number={n} />)}
+            </div>
         </div>
     )
 }

@@ -14,9 +14,11 @@ function LunchMenu() {
     useEffect(() => {
         dispatch(fetchMenuFromAPI('LOAD_LUNCH_MENU', 'lunch'))
     }, [dispatch]);
+
+    if (menu) {
+       // alert(`menu size: `, menu.length)
+    }
         
-
-
     return (
         // Render items for lunch 1 menu. 
         <div className="Menu-Container">

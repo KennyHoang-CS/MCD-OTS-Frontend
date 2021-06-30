@@ -14,7 +14,6 @@ import HappyMealMenu from '../Menus/HappyMealMenu';
 import LsmMenu from "../Menus/LsmMenu";
 import CondimentsMenu from '../Menus/CondimentsMenu';
 import SizingBar from "../../SizingUI/SizingBar";
-import Leaderboard from '../../Leaderboard';
 import '../../../css/MenuUI.css';
 import { UtilityBar } from "../../SpecialUI/UtilityMenu/UtilityBar";
 
@@ -30,9 +29,12 @@ function MenuRoutes() {
                         <LunchMenu />
                         <DrinksMenu />
                     </div>
+                    {/*
                     <div>
                         <UtilityBar />
                     </div>
+                    */
+                    }
                 </div>
             </Route>
             <Route exact path="/breakfast">
@@ -70,7 +72,7 @@ function MenuRoutes() {
                     </div>
                     <div className="Menu-Subcontent-Container">
                         <LunchMenu />
-                        <DrinksMenu />
+                        <DrinksMenu /> 
                     </div>
                     <div>
                         <UtilityBar />

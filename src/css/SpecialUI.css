@@ -33,14 +33,11 @@
     transform: translateX(-1px);
 }
 
-.Special-Bar {
-
-}
-
-.Special-Right-Buttons {
-
-}
-
-.Special-Left-Buttons {
-    
+@media only screen and (max-width: 600px) {
+    .Special-Bar, .Special-Left-Buttons, .Special-Right-Buttons{
+        display: flex;
+        margin-top: 0;
+        justify-content: center;
+        transform: translateY(-18px);
+    }
 }

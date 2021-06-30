@@ -4,11 +4,31 @@
     transform: translateY(-3px);
 }
 
+@media only screen and (max-width: 600px) {
+
+    .NumbersBar {
+        display: grid;
+        justify-content: center;
+        margin-top: 0;
+        transform: translateY(-23px);
+    }
+
+    .Left-Numbers {
+        display: flex;
+    }
+
+    .Right-Numbers {
+        display: flex;
+    }
+}
+
+
 .Top-Container {
-    
+ 
 }
 
 .MenuBar {
     display: flex;
     transform: translateY(-5px);
 }
+
