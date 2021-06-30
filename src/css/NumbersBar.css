@@ -17,7 +17,9 @@
 
     .NumbersBar {
         display: grid;
+        grid-template-columns: 1fr;
         justify-content: center;
+        margin-left: 21%;
         margin-top: 0;
         transform: translateY(-23px);
     }
