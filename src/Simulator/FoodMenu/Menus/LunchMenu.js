@@ -5,22 +5,19 @@ import FoodButton from "../FoodButtons/FoodButton";
 import { uuid } from 'uuidv4';
 import '../../../css/MenuUI.css';
 
-
+// Handles displaying lunch 1 menu.
 function LunchMenu() {
     
     const dispatch = useDispatch();
     const menu = useSelector(state => state.lunch.menu, shallowEqual);
 
+    // use 'react-redux' to load in lunch 1 menu from backend. 
     useEffect(() => {
         dispatch(fetchMenuFromAPI('LOAD_LUNCH_MENU', 'lunch'))
     }, [dispatch]);
-
-    if (menu) {
-       // alert(`menu size: `, menu.length)
-    }
         
     return (
-        // Render items for lunch 1 menu. 
+        // Render lunch 1 menu as a list of buttons. 
         <div className="Menu-Container">
             {menu && menu.map(
                 food => <FoodButton 

@@ -1,4 +1,5 @@
 
+// Handles the creation of a new item by using a function.
 export function createItem(name, drinkAlert, count, hasCombo, id, type, comboSize) {
     return {
         name,
@@ -11,10 +12,10 @@ export function createItem(name, drinkAlert, count, hasCombo, id, type, comboSiz
     }
 } 
 
+
+// Handles name flavorings. 
 export function hashBrownORFries(type, comboSize) {
     
-    console.log('hashBrownORFries', type)
-
     if (type === 'Lunch') {
         if (comboSize === 'Ml-Md') {
             return 'M Fries';

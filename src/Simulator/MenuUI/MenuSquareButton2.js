@@ -1,8 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import '../../css/MenuSquareButton.css';
 
+// Handles displaying two menus as a button. 
 function MenuSquareButton2({ name1, name2 }) {
 
+    // Some menus will have different CSS styles. 
     let className; 
     if (name1 === 'Happy Meal') {
         className = 'Menu-Square-Content-3';

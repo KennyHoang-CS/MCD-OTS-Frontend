@@ -1,5 +1,6 @@
 import '../../../css/FoodUI.css';
 
+// Function to display secret items as a button. 
 function LsmButton({ name, image }) {
     
     return (

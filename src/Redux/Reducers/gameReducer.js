@@ -54,10 +54,7 @@ function gameReducer(state = INITIAL_STATE, action) {
             
             state.customerIdx = -1;
             state.gameStatus = false;
-            state.correctOrders = 0;
-            state.wrongOrders = 0;
-
-
+    
             return {
                 ...state
             }

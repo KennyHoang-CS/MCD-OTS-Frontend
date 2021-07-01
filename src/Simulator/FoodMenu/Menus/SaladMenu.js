@@ -5,17 +5,19 @@ import FoodButton from "../FoodButtons/FoodButton";
 import '../../../css/MenuUI.css';
 import { uuid } from 'uuidv4';
 
+// Handles displaying salad menu. 
 function SaladMenu() {
     
     const dispatch = useDispatch();
     const menu = useSelector(state => state.salad.menu, shallowEqual);
 
+    // use 'react-redux' to load in salad menu from backend. 
     useEffect(() => {
         dispatch(fetchMenuFromAPI('LOAD_SALAD_MENU', 'salad'))
     }, [dispatch]);
         
     return (
-        // Render items for Salad menu. 
+        // Render salad menu as a list of buttons. 
         <div className="Menu-Container">
             {menu && menu.map(
                 food => <FoodButton 

@@ -1,14 +1,14 @@
 import { Switch } from "react-router";
-import Simulator from "../Simulator/Simulator";
 import { Route } from 'react-router-dom';
-import HomePage from "../Home/HomePage";
-import Leaderboard from '../Simulator/Leaderboard/Leaderboard';
-
 import { useHistory } from 'react-router-dom'
 
+import Simulator from "../Simulator/Simulator";
+import Leaderboard from '../Simulator/Leaderboard/Leaderboard';
 
 function Routes() {
     
+    // Create a history object and save the outer route '/leaderboard' because 
+    // it will be used to redirect outside of inner routes. 
     const history = useHistory();
 
     function myLocation () {
@@ -17,12 +17,11 @@ function Routes() {
         )
     }
 
+    // Return the core simulator and leaderboard. 
     return (
         <Switch>
             <Route exact path="/">
-                {/*<NavLink to="/leaderboard">Leaderboard</NavLink>*/}
                 <Simulator myLocation={myLocation}/>
-                {/*<HomePage />*/}
             </Route>
             <Route exact to="/leaderboard">
                 <Leaderboard />

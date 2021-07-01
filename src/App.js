@@ -1,12 +1,10 @@
 import './App.css';
-import NavBar from './Navigation/Navbar';
 import Routes from './Routes/Routes';
 
-
+// Handles displaying the simulator or the leaderboard. 
 function App() {
   return (
     <div className="App">
-      {/*<NavBar />*/}
       <Routes />
     </div>
   );

@@ -4,27 +4,23 @@ import { NavLink } from 'react-router-dom';
 import LeaderboardRank from './LeaderboardRank';
 import axios from 'axios';
 
-
 const BASE_URL = 'http://localhost:3001';
 
+// Handles displaying the leaderboard. 
 export default function Leaderboard() {
-
-    const dispatch = useDispatch(); 
 
     const [leaderboard, setLeaderboard] = useState([]);
 
+    // Load in leaderboard from backend. 
     useEffect(() => {
-        
         async function loadLeaderboard() {
             let getLeaderboardFromAPI = (await axios.get(`${BASE_URL}/leaderboard`)).data.items;
             setLeaderboard(getLeaderboardFromAPI);
         }
         loadLeaderboard(); 
-    
-        //dispatch(updateLeaderboard());
-
     }, [])
 
+    // Load in each user ranking as a row. 
     let displayLeaderboard = 
         leaderboard.map(
             (user, idx) => <LeaderboardRank 
@@ -34,6 +30,7 @@ export default function Leaderboard() {
             />);
     
     return (
+        // Render the leaderboard with its rankings. 
         <div className="Leaderboard-Container">
             <NavLink to="/">Go Back</NavLink>
             <h1>McDonalds OTS Leaderboards</h1>
@@ -50,5 +47,3 @@ export default function Leaderboard() {
         </div>
     )
 }
-
-//{leaderboard && leaderboard.map(user => <p>{user.username}</p>)}

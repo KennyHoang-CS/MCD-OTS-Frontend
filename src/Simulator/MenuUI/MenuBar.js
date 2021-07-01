@@ -2,6 +2,7 @@ import MenuSquareButton2 from './MenuSquareButton2';
 import MenuSquareButton from './MenuSquareButton';
 import '../../css/MenuUI.css';
 
+// Handles displaying the menus as a list of menu buttons.
 function MenuBar() {
     
     return (

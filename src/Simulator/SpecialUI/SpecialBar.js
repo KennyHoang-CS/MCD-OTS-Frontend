@@ -2,6 +2,7 @@ import SpecialButton from "./SpecialButton";
 import '../../css/SpecialUI.css';
 import { useSelector, shallowEqual } from 'react-redux';
 
+// Handles displaying the quantity and sizing buttons. 
 function SpecialBar() {
     
     let sizeState = useSelector(state => state.size.size, shallowEqual);

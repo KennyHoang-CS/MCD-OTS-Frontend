@@ -5,17 +5,19 @@ import FoodButton from "../FoodButtons/FoodButton";
 import '../../../css/MenuUI.css';
 import { uuid } from 'uuidv4';
 
+// Handles displaying McValue menu. 
 function McValueMenu() {
     
     const dispatch = useDispatch();
     const menu = useSelector(state => state.mcvalue.menu, shallowEqual);
     
+    // use 'react-redux' to load in McValue menu from backend. 
     useEffect(() => {
         dispatch(fetchMenuFromAPI('LOAD_MCVALUE_MENU', 'mcvalue'))
     }, [dispatch]);
         
     return (
-        // Render items for McValue menu. 
+        // Render McValue menu as a list of buttons. 
         <div className="Menu-Container">
             {menu && menu.map(
                 food => <FoodButton 

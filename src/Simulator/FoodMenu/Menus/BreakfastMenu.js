@@ -5,17 +5,19 @@ import FoodButton from "../FoodButtons/FoodButton";
 import '../../../css/MenuUI.css';
 import { uuid } from 'uuidv4';
 
+// Handles displaying breakfast 1 menu. 
 function BreakfastMenu() {
     
     const dispatch = useDispatch();
     const menu = useSelector(state => state.breakfast.menu, shallowEqual);
 
+    // To load in breakfast 1 menu from backend using react-redux. 
     useEffect(() => {
         dispatch(fetchMenuFromAPI('LOAD_BREAKFAST_MENU', 'breakfast'))
     }, [dispatch]);
         
     return (
-        // render breakfast menu items. 
+        // To display breakfast 1 menu as a list of buttons. 
         <div className="Menu-Container">
             {menu && menu.map(
                 food => <FoodButton 

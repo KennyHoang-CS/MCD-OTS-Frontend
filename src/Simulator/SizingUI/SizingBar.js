@@ -1,6 +1,7 @@
 import SizingButton from "./SizingButton";
 import '../../css/SizingBar.css';
 
+// Handles displaying the sizing bar from extra-small to extra-large, senior size. 
 function SizingBar() {
     
     return (

@@ -17,25 +17,27 @@ import SizingBar from "../../SizingUI/SizingBar";
 import '../../../css/MenuUI.css';
 import { UtilityBar } from "../../SpecialUI/UtilityMenu/UtilityBar";
 
+// This function handles all the inner routes that displays each menu
+// by breakfast, lunch, McValue, salad, McCafe, and so on. 
+// Each menu route will diplay their respective items along with the 
+// sizing bar (extra-small size button to extra large size button) 
+// and utility bar (clear choice and void item).
 function MenuRoutes() {
     return (
         <Switch>
             <Route exact path="/">
             <div className="Menu-Content-Container">
-                    <div>
-                        <SizingBar />
-                    </div>
-                    <div className="Menu-Subcontent-Container">
-                        <LunchMenu />
-                        <DrinksMenu />
-                    </div>
-                    {/*
-                    <div>
-                        <UtilityBar />
-                    </div>
-                    */
-                    }
+                <div>
+                    <SizingBar />
                 </div>
+                <div className="Menu-Subcontent-Container">
+                    <BreakfastMenu />
+                    <DrinksMenu />
+                </div>
+                <div>
+                    <UtilityBar />
+                </div>
+            </div>
             </Route>
             <Route exact path="/breakfast">
                 <div className="Menu-Content-Container">

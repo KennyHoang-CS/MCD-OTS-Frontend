@@ -1,11 +1,15 @@
 import '../../css/UserUI.css';
 import UserIcon from './UserIcon';
 
+// Handles displaying the top bar that has the linkedin url, time, and date. 
 function UserBar() {
 
     let today = new Date(),
 
+    // get the current date. 
     date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+    
+    // get the current time. 
     let time = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
 
     return (

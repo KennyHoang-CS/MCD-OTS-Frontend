@@ -1,50 +1,49 @@
 
-
+// Handles validating the user inputted order and checks if their input is correct
+// for that one customer. 
 export function validateOrder(inputOrder, newId) {
 
     try {
         let id = --newId; 
-        /*
-        console.log('Input Order: ', inputOrder);
-        console.log('ID: ', id);
-        console.log('Scores answer: ', answers[id]); 
-        console.log('answers length: ', answers[id].length);   
-        */
+
+        // Initial check: if input order length does not match the customer answers
+        // length, then its INVALID. 
         if (inputOrder.length !== answers[id].length) {
             return false; 
         }
 
-        let key; 
-        let countResult;
-        let drinkAlertResult = true;
-        
-        //console.log('inputOrder length: ', inputOrder.length)
-
+        let key;    // to hold the item's name like 'Big Mac' and etc.
+        let countResult;    // to hold the item's quantity. 
+        let drinkAlertResult = true;    // to determine if the item is a combo. 
+    
+        // Loop through the answers object to determine if its in the user input. 
         for (let i = 0; i < answers[id].length; i++) {
             
             key = answers[id][inputOrder[i].name];
 
+            // Does the answer object key have that input item name?
             if (key) {
+
+                // Is the input item quantity the same as in answers object? 
                 countResult = key.count === inputOrder[i].count;
                 
+                // Is the drinkAlert same in input item and answers object? 
                 if (key.drinkAlert) {
                     drinkAlertResult = key.drinkAlert === inputOrder[i].drinkAlert;
                 }
 
-                console.log('i: ', i);
-                console.log('countResult: ', countResult);
-                console.log('drinkRes: ', drinkAlertResult);
-
+                // Did any conditions failed? Return as false for input failure. 
                 if (drinkAlertResult === false) {
-                    console.log('drinkAlert returning false');
+                    
                     return false;
                 }
                 if (countResult === false) {
-                    console.log('countRes returning false');
+                    
                     return false; 
                 }
                 
-            } else {
+            } else {    // if answers object key does not exist, the user input is wrong. 
+                
                 return false; 
             }
             
@@ -52,10 +51,12 @@ export function validateOrder(inputOrder, newId) {
     } catch (err) {
 
     }
-    
+    // If we didn't return false, the user input matches the answer object! 
     return true; 
 }
 
+// answers object holds the answer for every customer, which will be used to 
+// compare against user input. 
 const answers = [
     {
         // Customer id #1

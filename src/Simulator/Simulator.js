@@ -3,6 +3,7 @@ import '../css/simulator.css';
 import LeftSideSim from './LeftSideSim/LeftSideSim';
 import CentralSim from './CentralSim/CentralSim';
 
+// Handles displaying full simulator. 
 function Simulator({ myLocation }) {
     return (
         <BrowserRouter>
@@ -13,11 +14,5 @@ function Simulator({ myLocation }) {
         </BrowserRouter>
     )
 }
-
-/*
-<LeftSideSim />
-<TopBar />
-
-*/
 
 export default Simulator;
