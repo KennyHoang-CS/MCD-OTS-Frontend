@@ -27,8 +27,8 @@ export default function Leaderboard() {
 
     let displayLeaderboard = 
         leaderboard.map(
-            user => <LeaderboardRank 
-                id={user.id}
+            (user, idx) => <LeaderboardRank 
+                id={++idx}
                 username={user.username} 
                 formatted_time={user.formatted_time} 
             />);
