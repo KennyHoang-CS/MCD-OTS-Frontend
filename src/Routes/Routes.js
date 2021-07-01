@@ -2,7 +2,7 @@ import { Switch } from "react-router";
 import Simulator from "../Simulator/Simulator";
 import { Route } from 'react-router-dom';
 import HomePage from "../Home/HomePage";
-import Leaderboard from "../Simulator/Leaderboard";
+import Leaderboard from '../Simulator/Leaderboard/Leaderboard';
 
 import { useHistory } from 'react-router-dom'
 

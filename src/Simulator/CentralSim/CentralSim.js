@@ -1,12 +1,12 @@
 import '../../css/NumbersBar.css';
 import NumbersBar from '../NumbersUI/NumbersBar';
-import MenuBar from '../Menu/MenuBar';
+import MenuBar from '../MenuUI/MenuBar';
 import SpecialBar from '../SpecialUI/SpecialBar';
 import UserBar from '../UserUI/UserBar';
 import MenuRoutes from '../FoodMenu/MenuRoutes/MenuRoutes';
     
 
-function TopBar() {
+function CentralSim() {
     
     return (
         <div className="Top-Container">
@@ -19,4 +19,4 @@ function TopBar() {
     )
 }
 
-export default TopBar;
+export default CentralSim;

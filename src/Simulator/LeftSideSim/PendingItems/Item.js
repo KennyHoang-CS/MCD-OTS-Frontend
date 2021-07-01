@@ -1,5 +1,5 @@
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
-import { toggleItem, setCurrentItemDefault } from '../../Redux/actionCreators';
+import { toggleItem, setCurrentItemDefault } from '../../../Redux/actionCreators';
 
 export default function Item({ id, name, count, drinkAlert, type, comboSize }) {
     

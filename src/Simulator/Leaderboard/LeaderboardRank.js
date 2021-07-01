@@ -1,4 +1,4 @@
-import '../css/Leaderboard.css';
+import '../../css/Leaderboard.css';
 
 export default function LeaderboardRank({ id, username, formatted_time }) {
 

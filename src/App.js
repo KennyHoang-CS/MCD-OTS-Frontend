@@ -1,7 +1,7 @@
 import './App.css';
 import NavBar from './Navigation/Navbar';
 import Routes from './Routes/Routes';
-import Leaderboard from './Simulator/Leaderboard';
+
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import '../../css/LeftSideSim.css';
-import PendingItems from './PendingItems';
+import PendingItems from './PendingItems/PendingItems';
 import Customers from './Customers/Customers';
 import Timer from './Customers/Timer';
 import { useSelector, shallowEqual } from 'react-redux';

@@ -1,14 +1,14 @@
 import { BrowserRouter } from 'react-router-dom';
 import '../css/simulator.css';
 import LeftSideSim from './LeftSideSim/LeftSideSim';
-import TopBar from './TopSim/TopBar';
+import CentralSim from './CentralSim/CentralSim';
 
 function Simulator({ myLocation }) {
     return (
         <BrowserRouter>
             <div className="Simulator-Container">
                 <LeftSideSim myLocation={myLocation}/>
-                <TopBar />
+                <CentralSim />
             </div>
         </BrowserRouter>
     )

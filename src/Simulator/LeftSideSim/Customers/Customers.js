@@ -7,7 +7,7 @@ import { fetchMenuFromAPI, nextCustomer,
     updateLeaderboard, setFormattedTime } from '../../../Redux/actionCreators';
 import { uuid } from 'uuidv4';
 import Customer from "./Customer";
-import { validateOrder } from './Scores';
+import { validateOrder } from './customerHelpers';
 import '../../../css/CustomerUI.css';
 
 export default function Customers() {
