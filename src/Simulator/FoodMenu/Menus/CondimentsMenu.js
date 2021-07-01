@@ -16,7 +16,7 @@ function CondimentsMenu() {
         
     return (
         // render breakfast menu items. 
-        <div className="Menu-Container">
+        <div className="Condiments-Container">
             {menu && menu.map(food => <FoodButton id={uuid()} name={food.name} image={food.imagesrc} flag="sauce"/>)}
         </div>
     )

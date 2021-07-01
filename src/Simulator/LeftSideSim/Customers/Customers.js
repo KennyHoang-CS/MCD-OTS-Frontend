@@ -95,6 +95,8 @@ export default function Customers() {
         return formattedTime;
     }
     
+    customerIdx = 19;
+
     return ( 
         <div>
             {gamePlayed && 

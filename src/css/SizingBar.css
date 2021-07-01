@@ -4,17 +4,10 @@
     transform: translateY(-17px);
 }
 
-@media only screen and (max-width: 600px) {
-    .Sizing-Bar {
-        margin-left: 150px;
-    }
-    
-}
-
 .Sizing-Button {
     background-color: #ffea2c;
-    width: 55px;
-    height: 55px;
+    width: 57px;
+    height: 57px;
     border-radius: 10px;
     margin-top: 20px;
     transform: rotate(45deg);
@@ -23,30 +16,60 @@
 .Sizing-Button:hover {
     background-color: #00308F;
     color: white;
-    width: 55px;
-    height: 55px;
-    border-radius: 10px;
-    margin-top: 20px;
-    transform: rotate(45deg);
-    transition: all 0.2;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
 .Sizing-Button-Content {
     display: flex;
     justify-content: center;
-    transform: translateY(-45px);
+    transform: translateY(-30px);
     margin-top: 12px;
     margin-left: 15px;
 }
 
 .abbreviation {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 20px;
     transform: rotate(-45deg);
 }
 
 .sizing-name {
     font-weight: 300;
-    font-size: 15px;
-    transform: translateY(-20px);
+    font-size: 12.7px;
+    transform: translateY(-14px);
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .Sizing-Bar {
+        margin-left: 220px;
+    }
+    
+}
+
+@media only screen and (min-width: 600px) {
+    
+    .Sizing-Bar {
+        margin-left: 115px;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) {
+    
+    .Sizing-Bar {
+        margin-left: 10vw;
+        margin-top: 10px;
+    }
+    
+}
+
+@media only screen and (min-width: 992px) {
+    
+    .Sizing-Bar {
+        margin-left: 1vw;
+        margin-top: 2px;
+    }
+    
 }

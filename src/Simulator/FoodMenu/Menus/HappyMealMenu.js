@@ -16,7 +16,7 @@ function HappyMealMenu() {
         
     return (
         // render breakfast menu items. 
-        <div className="Menu-Container">
+        <div className="Happy-Meals-Container">
             {menu && menu.map(food => <DessertButton id={uuid()} name={food.name} image={food.imagesrc}/>)}
         </div>
     )

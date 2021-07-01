@@ -17,7 +17,8 @@
 
 .User-Top {
     display: grid;
-    grid-template-columns: 0.3fr 40px 1fr 0.5fr;
+    grid-template-columns: 0.3fr 40px 325px 80px;
+    grid-template-rows: 80px;
     transform: translateY(-12px);
 }
 
@@ -49,14 +50,96 @@
         display: grid;
         grid-template-columns: 1fr;
         justify-content: center;
-        margin-left: 50%;
+        margin-left: 40%;
         border: none;
         margin-top: 10px;
+    }
+
+    .User-Top {
+        display: grid;
+        grid-template-columns: 0.3fr 40px 325px 80px;
+        grid-template-rows: 65px;
+        transform: translateY(-12px);
     }
 
     .User-Content {
         display: grid;
         justify-content: center;
     }
+}
+
+@media only screen and (min-width: 600px) {
+    .User-Bar-Container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        margin-left: 50%;
+        border: none;
+        transform: translateY(-200px);
+    }
+
+    .User-Logged {
+        color: white;
+        font-weight: 900;
+        width: 75px;
+        margin-left: 42px;
+        transform: translateY(-16px);
+        transform: translateX(-10px);
+    }
+
+    .User-Top {
+        display: grid;
+        grid-template-columns: 0.3fr 40px 325px 80px;
+        grid-template-rows: 65px;
+        transform: translateY(-12px);
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .User-Bar-Container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        margin-left: 30%;
+        border: none;
+        transform: translateY(-200px);
+    }
+
+    .User-Logged {
+        color: white;
+        font-weight: 900;
+        width: 75px;
+        margin-left: 42px;
+        transform: translateY(-16px);
+        transform: translateX(-10px);
+    }
+
+}
+
+
+@media only screen and (min-width: 992px) {
+    .User-Bar-Container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        margin-left: 1%;
+        border: none;
+        margin-top: 200px;
+    }
+
+    .User-Logged {
+        color: white;
+        font-weight: 900;
+        width: 75px;
+        margin-left: 42px;
+        transform: translateY(-16px);
+        transform: translateX(-10px);
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
     
+
 }

@@ -15,7 +15,7 @@ function LsmMenu() {
     }, [dispatch]);
         
     return (
-        // render breakfast menu items. 
+        // render LSM menu items. 
         <div className="LSM-Menu-Container">
             {menu && menu.map(food => <LsmButton id={uuid()} name={food.name} image={food.imagesrc}/>)}
         </div>

@@ -13,9 +13,6 @@ function SpecialBar() {
                 <SpecialButton name="Quantity" display={quantityState}/>
                 <SpecialButton name="Sizing" display={sizeState}/>
             </div>
-            <div className="Special-Right-Buttons">
-        
-            </div>
         </div>
     )
 }

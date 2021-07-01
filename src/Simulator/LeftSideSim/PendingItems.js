@@ -20,7 +20,9 @@ function PendingItems() {
         <div className="Pending-Orders">
             {gameStatus && <h2>Customer Order #{++customerIdx}</h2>}
             {!gameStatus && <h2>Pending Customers</h2>}
-            { myOrder }
+            <div className="Orders-Placed">
+                { myOrder }
+            </div>
         </div>
     )
 }

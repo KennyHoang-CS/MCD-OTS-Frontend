@@ -16,7 +16,7 @@ function DrinksMenu() {
         
     return (
         // render drinks items. 
-        <div className="Drink-Container">
+        <div className="Drink-Container Drink-Container-Mobile">
             {drinksMenu && drinksMenu.map(d => <DrinkButton id={uuid()} name={d.name} image={d.imagesrc} sizeable={d.sizeable}/>)}
         </div>
     )

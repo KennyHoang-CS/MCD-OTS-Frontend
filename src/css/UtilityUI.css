@@ -1,5 +1,5 @@
 .Utility-Bar {
-    background-color: black;
+   
 }
 
 .Utility-Button {
@@ -36,3 +36,15 @@
     cursor: pointer;
 }
 
+@media only screen and (max-width: 600px) {
+    .Utility-Bar {
+        margin-left: 0;
+        transform: translateY(-5px);
+    }
+}
+
+@media only screen and (min-width: 600px) {
+   .Utility-Bar2 {
+       transform: translateX(0px);
+   }
+}

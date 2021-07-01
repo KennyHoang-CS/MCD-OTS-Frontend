@@ -67,9 +67,215 @@ label{
 }
 
 @media only screen and (max-width: 600px) {
+    
     .Customer-Order {
-        margin-left: 26%;
-        width: 300px;
+        margin-left: 200px;
+        width: 400px;
         font-weight: 600;
     }    
+}
+
+@media only screen and (min-width: 992px) {
+    
+    .Customer-Order {
+        margin-left: 40%;
+        width: 200px;
+        height: 150px;
+        overflow: scroll;
+        font-weight: 600;
+        transform: translateY(-20px);
+    }
+
+    .Customer-Container img {
+        transform: translateX(6px);
+    }
+    
+    .Timer {
+        margin-top: 10px;
+        margin-left: 11vw;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+
+    .Customer-Header {
+        display: flex;
+        justify-content: center;
+        font-weight: 900;
+        margin-left: 12vw;
+        transform: translateY(-20px);
+    }
+    
+    .Form-Wrapper .Form-Submit-Btn, .Submit-Order-Btn {
+        margin: 0 5px;
+        padding: 5px;
+        background-color: rgba(0, 0, 255, 0.7);
+        border-radius: 5px;
+        color: white;
+        font-weight: bolder;
+        margin-left: 27%;
+    }
+
+    .Submit-Order-Btn {
+        transform: translateY(-23px);
+    }
+    
+    .Form-Wrapper .Form-Submit-Btn:hover, .Submit-Order-Btn:hover {
+        margin: 0 5px;
+        padding: 5px;
+        background-color: rgba(0, 0, 245, 0.6);
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        margin-left: 27%;
+    }
+
+    input{
+        padding: 5px 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-left: 35%;
+    }
+
+    .User-Form h3 {
+        margin-bottom: 25px;
+        margin-left: 13vw;
+    }
+    
+    label{
+        font-weight: bold;
+        font-size: 12px;
+        margin-left: 10vw;
+    }
+}
+
+@media only screen and (min-width: 1055px) {
+    
+    .Customer-Container {
+        margin-right: 50px;
+    }
+    
+    .User-Form h3 {
+        margin-bottom: 25px;
+        margin-left: 13vw;
+    }
+    
+    label{
+        font-weight: bold;
+        margin-left: 10vw;
+        font-size: 20px;
+    }
+
+    input{
+        padding: 5px 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-left: 10vw;
+    }
+
+    .Form-Wrapper .Form-Submit-Btn, .Submit-Order-Btn {
+        margin: 0 5px;
+        padding: 5px;
+        background-color: rgba(0, 0, 255, 0.7);
+        border-radius: 5px;
+        color: white;
+        font-weight: bolder;
+    }
+    
+    .Form-Wrapper .Form-Submit-Btn:hover, .Submit-Order-Btn:hover {
+        margin: 0 5px;
+        padding: 5px;
+        background-color: rgba(0, 0, 245, 0.6);
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+    }
+    
+}
+
+@media only screen and (min-width: 1100px) {
+    
+    .Customer-Order {
+        margin-left: 30%;
+        width: 250px;
+        font-weight: 600;
+    }
+
+    .User-Form h3 {
+        margin-bottom: 25px;
+        margin-left: 20%;
+    }
+    
+    .Timer {
+        margin-top: 10px;
+        margin-left: 9vw;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+
+    .Customer-Header {
+        display: flex;
+        justify-content: center;
+        font-weight: 900;
+        margin-left: 9vw;
+    }
+
+}
+
+@media only screen and (min-width: 1150px) {
+    
+    .Customer-Order {
+        margin-left: 25%;
+        width: 250px;
+        font-weight: 600;
+    }
+    
+    .Timer {
+        margin-top: 10px;
+        margin-left: 7vw;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+
+    .Customer-Header {
+        display: flex;
+        justify-content: center;
+        font-weight: 900;
+        margin-left: 7vw;
+    }
+
+    .User-Form h3 {
+        margin-bottom: 25px;
+        margin-left: 8vw;
+    }
+
+    label{
+        font-weight: bold;
+        margin-left: 5vw;
+        font-size: 20px;
+    }
+
+    input{
+        padding: 5px 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-left: 6vw;
+    }
+
+}
+
+@media only screen and (min-width: 1150px) {
+    
+    .User-Form h3 {
+        margin-bottom: 25px;
+        margin-left: 2vw;
+    }
 }

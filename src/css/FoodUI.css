@@ -97,11 +97,40 @@
 
 @media only screen and (max-width: 600px) {
     .Food-Content p, .Drink-Content p, .Dessert-Content p, .LSM-Content p {
-        width: 12.7vw;
-        font-size: 9px;
+        width: 11.9vw;
+        font-size: 7px;
         margin: 0;
         color: white;
         font-weight: 900;
     }
-
 }
+
+@media only screen and (min-width: 601px) {
+    .Food-Content p, .Drink-Content p, .Dessert-Content p, .LSM-Content p {
+        width: 70px;
+        font-size: 7px;
+        margin: 0;
+        color: white;
+        font-weight: 900;
+    }
+}
+
+@media only screen and (min-width: 992px){
+
+    .Food-Content p, .Drink-Content p, .Dessert-Content p, .LSM-Content p {
+        width: 70px;
+        font-size: 8px;
+        margin: 0;
+        color: white;
+        font-weight: 900;
+    }
+    
+}
+
+
+@media only screen and (min-width: 1100px){
+
+  
+    
+}
+

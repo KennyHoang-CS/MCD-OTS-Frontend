@@ -62,15 +62,9 @@
     }
 
     .Leaderboard {
-        display: grid;
-        grid-template-columns: 1fr;
-        justify-content: center;
         margin: 0 10%;
-        border: 3px solid black;
-        padding-bottom: 6%;
     }
     
-
     .Leaderboard-Ranking {
         margin-left: 4%;
         font-size: 15px;
@@ -92,11 +86,25 @@
     }
 
     .Leaderboard-User {
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 3px solid black;
         font-weight: 900;
     }
-    
+
 }
+
+@media only screen and (min-width: 600px) {
+
+    .Leaderboard {
+        margin: 0 5%;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .Leaderboard {
+        margin: 0 15%;
+    }
+
+}
+
 

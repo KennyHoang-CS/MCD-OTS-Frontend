@@ -169,7 +169,7 @@ function MenuRoutes() {
                     <div className="Menu-Subcontent-Container">
                         <Dessert2Menu />
                     </div>
-                    <div>
+                    <div className="Utility-Container">
                         <UtilityBar />
                     </div>
                 </div>

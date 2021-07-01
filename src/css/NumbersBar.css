@@ -13,7 +13,37 @@
     display: flex;
 }
 
+.Top-Container {
+    
+}
+
+.MenuBar {
+    display: flex;
+    transform: translateY(-5px);
+}
+
+
 @media only screen and (max-width: 600px) {
+
+    .NumbersBar {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        margin-left: 27%;
+        margin-top: 0;
+        transform: translateY(-23px);
+    }
+
+    .Left-Numbers {
+        display: flex;
+    }
+
+    .Right-Numbers {
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 601px) {
 
     .NumbersBar {
         display: grid;
@@ -33,13 +63,36 @@
     }
 }
 
+@media only screen and (min-width: 768px) {
 
-.Top-Container {
- 
+    .NumbersBar {
+        display: flex;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        margin-left: 0;
+        margin-top: 0;
+        transform: translateY(-23px);
+    }
+
 }
 
-.MenuBar {
-    display: flex;
-    transform: translateY(-5px);
+@media only screen and (min-width: 992px) {
+
+    .NumbersBar {
+        display: flex;
+        grid-template-columns: 1fr;
+        justify-content: start;
+        margin-left: 0;
+        margin-top: -38px;
+        transform: translateY(-23px);
+    }
+
 }
 
+@media only screen and (min-width: 1200px) {
+
+    .Top-Container {
+        transform: translateX(-225px);
+    }
+
+}

@@ -65,7 +65,21 @@
         display: grid;
         grid-template-columns: repeat(3, 80px);
         row-gap: 23px;
-        margin-left: 10px;
+        margin-left: 0;
+    }
+
+    .Happy-Meals-Container, .Condiments-Container {
+        display: grid;
+        grid-template-columns: repeat(3, 80px);
+        row-gap: 23px;
+        margin-left: 0px;
+    }
+
+    .Dessert-Menu-Container {
+        display: grid;
+        grid-template-columns: repeat(3, 80px);
+        row-gap: 23px;
+        margin-left: 0px;
     }
 
     .McCafe-Container {
@@ -82,7 +96,7 @@
         row-gap: 23px;
         margin-top: 50px;
         margin-bottom: 50px;
-        margin-left: 10px;
+        margin-left: 0px;
     }
 
     .Drink-Container-2 {
@@ -90,6 +104,195 @@
         grid-template-columns: repeat(3, 80px);
         row-gap: 23px;
         margin-left: 10px;
+    }
+    
+}
+
+
+@media only screen and (min-width: 600px) {
+    
+    .MenuBar {
+        margin-top: 0;
+        display: grid;
+        justify-content: center;
+    }
+
+    .Left-Menu-Bar {
+        display: flex;
+    }
+
+    .Right-Menu-Bar {
+        display: flex;
+        margin-left: 9%;
+    }
+
+    .Menu-Container {
+        display: grid;
+        grid-template-columns: repeat(4, 80px);
+        row-gap: 23px;
+        margin-left: 0px;
+    }
+
+    .Dessert-Menu-Container {
+        display: grid;
+        grid-template-columns: repeat(4, 80px);
+        row-gap: 23px;
+        margin-left: 0px;
+    }
+
+    .Happy-Meals-Container, .Condiments-Container {
+        display: grid;
+        grid-template-columns: repeat(4, 80px);
+        row-gap: 23px;
+        margin-left: 0px;
+    }
+
+    .McCafe-Container {
+        display: grid;
+        grid-template-columns: repeat(4, 80px);
+        row-gap: 23px;
+        margin-left: 0px;
+    }
+
+    .Drink-Container {
+        display: grid;
+        grid-template-columns: repeat(5, 80px);
+        row-gap: 23px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 0;
+    }
+
+    .Drink-Container-Mobile {
+        display: grid;
+        grid-template-columns: repeat(4, 80px);
+        row-gap: 23px;
+        margin-top: 125px;
+        margin-bottom: 50px;
+        margin-left: 0;
+    }
+
+    .Drink-Container-2 {
+        display: grid;
+        grid-template-columns: repeat(4, 80px);
+        row-gap: 23px;
+        margin-left: 0;
+    }
+
+    .LSM-Menu-Container {
+        margin-left: 10vw;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) {
+    
+    .MenuBar {
+        margin-top: -15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .Right-Menu-Bar {
+        margin-left: 0;
+    }
+
+    .Menu-Container {
+        display: grid;
+        grid-template-columns: repeat(6, 80px);
+        row-gap: 23px;
+        margin-left: 2px;
+        margin-top: 2px;
+    }
+
+    .McCafe-Container {
+        display: grid;
+        grid-template-columns: repeat(6, 80px);
+        row-gap: 23px;
+        margin-left: 4px;
+        margin-top: 5px;
+    }
+
+    .Dessert-Menu-Container {
+        display: grid;
+        grid-template-columns: repeat(6, 80px);
+        row-gap: 23px;
+        margin-left: 0px;
+    }
+
+    .Happy-Meals-Container, .Condiments-Container {
+        display: grid;
+        grid-template-columns: repeat(6, 80px);
+        row-gap: 23px;
+        margin-left: 0px;
+    }
+
+    .Drink-Container {
+        display: grid;
+        grid-template-columns: repeat(5, 80px);
+        row-gap: 23px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 2px;
+    }
+
+    .Drink-Container-2 {
+        display: grid;
+        grid-template-columns: repeat(6, 80px);
+        row-gap: 23px;
+        margin-left: 2px;
+    }
+
+    .LSM-Menu-Container {
+        margin-left: 10vw;
+    }
+    
+}
+
+@media only screen and (min-width: 992px) {
+    
+    .MenuBar {
+        margin-top: -23px;
+        display: flex;
+        justify-content: start;
+    }
+
+    .Right-Menu-Bar {
+        margin-left: 0;
+    }
+
+    .Menu-Container {
+        display: grid;
+        grid-template-columns: repeat(6, 80px);
+        row-gap: 23px;
+        margin-left: 2px;
+        margin-top: 2px;
+    }
+
+    .McCafe-Container {
+        display: grid;
+        grid-template-columns: repeat(5, 80px);
+        row-gap: 23px;
+        margin-left: 4px;
+        margin-top: 5px;
+    }
+
+    .Drink-Container {
+        display: grid;
+        grid-template-columns: repeat(6, 80px);
+        row-gap: 23px;
+        margin-left: 2px;
+    }
+
+    .Drink-Container-2 {
+        display: grid;
+        grid-template-columns: repeat(5, 80px);
+        row-gap: 23px;
+        margin-left: 2px;
+    }
+
+    .LSM-Menu-Container {
+        margin-left: 10vw;
     }
     
 }
