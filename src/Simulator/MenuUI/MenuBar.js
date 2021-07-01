@@ -17,8 +17,8 @@ function MenuBar() {
             <div className="Right-Menu-Bar">
                 <MenuSquareButton2 name1={'Dessert'} name2={'Dessert-2'} />
                 <MenuSquareButton name1={'Happy Meal'} />
-                <MenuSquareButton2 name1={'LSM'} name2={'LSM-2'} />
-                <MenuSquareButton2 name1={'Condiments'} name2={'Gifts'} />
+                <MenuSquareButton name1={'LSM'} />
+                <MenuSquareButton name1={'Condiments'} />
             </div>
         </div>
     )
