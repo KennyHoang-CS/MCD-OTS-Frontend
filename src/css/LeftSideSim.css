@@ -257,19 +257,25 @@
 @media only screen and (min-width: 1200px) {
 
     .Customer-Start-Btn {
-        margin-right: 25%;
+        margin-right: 0;
+        transform: translateX(-80px);
+        width: 100px;
     }
     
     .Customer-Start-Btn:hover {
-        margin-right: 25%;
+        margin-right: 0;
+        transform: translateX(-80px);
+        width: 100px;
     }
 
     .Leaderboard-Btn {
         margin-right: 35%;
+        transform: translateX(-37px);
     }
     
     .Leaderboard-Btn:hover {
         margin-right: 35%;
+        transform: translateX(-37px);
     }
 
 }

@@ -23,7 +23,7 @@
 .Sizing-Button-Content {
     display: flex;
     justify-content: center;
-    transform: translateY(-30px);
+    transform: translateY(-13px);
     margin-top: 12px;
     margin-left: 15px;
 }
@@ -68,15 +68,9 @@
 @media only screen and (min-width: 992px) {
     
     .Sizing-Bar {
-        margin-left: 1vw;
+        margin-left: 10px;
         margin-top: 2px;
     }
     
 }
 
-@media only screen and (min-width: 1200px) {
-    
-    .Sizing-Bar {
-        margin-left: 3px;
-    }
-}

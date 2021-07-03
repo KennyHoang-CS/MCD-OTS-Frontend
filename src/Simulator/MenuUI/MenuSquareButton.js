@@ -6,7 +6,7 @@ function MenuSquareButton({ name1 }) {
     return (
         <div className="Menu-Square-Button">
             <div className="Menu-Square-Content">
-                <NavLink exact to={`/${name1}`}>{ name1 }</NavLink>
+                <NavLink className="Subname-1" exact to={`/${name1}`}>{ name1 }</NavLink>
             </div>
         </div>
     )

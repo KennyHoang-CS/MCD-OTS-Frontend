@@ -1,0 +1,108 @@
+
+// CASE: THERE EXISTS MULTIPLE DISTINCT STAND-ALONE DRINKS.  
+    if ((state.distinctDrinks.size > 1) && action.order.count > 0) {
+                    
+        let countUpcomingMeals = action.order.count; 
+        let countCurrentDrink; // used to hold the quantity of the stand-alone drink from state. 
+        let tempArr = []; // used to hold each combo with their different drink. 
+        let isThereExtraDrinks = false;  // flag to indicate any extra drinks. 
+        let foodType = action.order.type; // store the item combo food type.
+        let comboSize = action.order.comboSize; // store the item combo size.  
+        let extraDrinks = {     // used to store any extra drinks. 
+            name: '',
+            count: 0,
+            foodType: 'drink' 
+        };
+                    
+        // For every combo, keep inserting stand-alone drinks into them. 
+        while((state.distinctDrinks.size > 1) && countUpcomingMeals > 0) {
+                        
+            // set it to the # of drinks from the state.
+            countCurrentDrink = state.order[soloDrinkFound].count;
+                        
+            // need a hard count that never changes of original drinks count from state. 
+            const copyCurrentDrinkCount = countCurrentDrink;
+
+            // subtract state drink acount from upcoming meals.
+            state.order[soloDrinkFound].count -= countUpcomingMeals;
+
+            // reset drink count from state back to original count. 
+            if (state.order[soloDrinkFound].count <= 0) {
+                state.order[soloDrinkFound].count = countCurrentDrink;
+            } 
+
+            countCurrentDrink = state.order[soloDrinkFound].count;
+                        
+            // if these counts are not the same, then we have extra drinks. 
+            if (!(countCurrentDrink === copyCurrentDrinkCount)) {
+                            
+                // set the extra drinks flag to true
+                isThereExtraDrinks = true;
+
+                    // initialize the extra drinks obj with values. 
+                    extraDrinks.count = countCurrentDrink;
+                    extraDrinks.name = state.order[soloDrinkFound].name;
+                    extraDrinks.foodType = 'drink';
+                }
+                        
+                // Create the item combo with the stand-alone drink
+                // assign a new id to it, this id will be used to 
+                // uniquely toggle the item, clearing the drink, or deleting.
+                // Push the created item into the temporary array.  
+                tempArr.push(createItem(
+                    action.order.name,
+                    state.order[soloDrinkFound].name,
+                    countCurrentDrink,
+                    false,
+                    uuid(),
+                    hashBrnORFries(foodType, comboSize) || foodType,
+                    comboSize
+                ))
+                        
+                // countCurrentDrink holds the drink count from state.
+                // If it is lower than upcoming meals, then that drink
+                // has run out of usage, so remove that drink from state.
+                // i.e. 3 cokes vs 4 meals. 
+                if (countCurrentDrink - countUpcomingMeals <= 0) {
+                    state.distinctDrinks.delete(state.order[soloDrinkFound].name);    
+                    state.order.splice(soloDrinkFound, 1);
+                }
+
+                // subtract upcoming meals quantity, incase we need to insert
+                // anymore stand-alone drinks in it. 
+                countUpcomingMeals -= countCurrentDrink;
+
+                // looping condition to be used to locate anymore stand-alone drinks. 
+                soloDrinkFound = state.order.findIndex( 
+                    i => i.foodType === 'drink'
+                );      
+            } // end while 
+                
+            // if our extra drinks flag is true, add our combos from tempArr with their 
+            // inserted drinks along with any extra remaining drinks into the state.
+            if (isThereExtraDrinks) {
+                console.log("isTHEREEXTRA DRINKS")
+                return {
+                    ...state,
+                    order: [
+                        ...state.order,
+                        ...tempArr, 
+                        extraDrinks
+                    ]
+                }
+            } else { 
+            // if there weren't any extra drinks, add our combos from tempArr with their 
+            // inserted drinks into the state. 
+            console.log('THERE WERENT EXTRA DRINKS')
+            return {
+                ...state,
+                order: [
+                    ...state.order,
+                    ...tempArr
+                ]
+            }
+        }
+    }
+
+
+**** MORE EDGE CASES TO BE DETERMINED ****

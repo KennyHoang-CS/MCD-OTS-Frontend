@@ -80,6 +80,8 @@
 
     .NumbersBar {
         margin-top: -38px;
+        margin-left: 0;
+        justify-content: start;
     }
 
 }
@@ -91,6 +93,7 @@
     }
 
     .NumbersBar {
-        margin-left: -215px;
+        margin-left: 0;
     }
+
 }

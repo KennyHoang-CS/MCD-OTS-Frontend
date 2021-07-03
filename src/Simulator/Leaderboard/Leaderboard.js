@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import LeaderboardRank from './LeaderboardRank';
 import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
 
 const BASE_URL = 'http://localhost:3001';
 
@@ -39,6 +40,7 @@ export default function Leaderboard() {
     let displayLeaderboard = 
         leaderboard.map(
             (user, idx) => <LeaderboardRank 
+                key={uuidv4()}
                 id={++idx}
                 username={user.username} 
                 formatted_time={user.formatted_time} 

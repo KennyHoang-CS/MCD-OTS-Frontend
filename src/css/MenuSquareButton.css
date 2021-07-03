@@ -23,12 +23,23 @@
     display: grid;
 }
 
-.Subname-1 {
-    
+.Menu-Square-Content {
+    font-weight: 600;
+    font-size: 13px;
+    display: grid;
+}
+
+.Subname-1:hover, .Subname-2:hover {
+    color: yellow;
+    text-shadow: -1px 1px 0 #000,
+				1px 1px 0 #000,
+				1px -1px 0 #000;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
 .Subname-2 {
-   border-top: 2px solid white;
+    border-top: 2px solid white;
 }
 
 .Menu-Square-Content a, .Menu-Square-Content-3 a {

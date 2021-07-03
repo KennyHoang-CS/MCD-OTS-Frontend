@@ -16,7 +16,9 @@ export default function UtilityButton({ name }) {
 
     // Call redux to remove the drink from the item combo. 
     function clearChoice() {
+        if (itemIdState === '') return; // error prevention. 
         dispatch(removeDrinkFromMeal(itemIdState));
+        dispatch(setCurrentItemDefault());
     }
 
     // Call redux to remove that item from pending orders screen. 

@@ -346,6 +346,6 @@
 @media only screen and (min-width: 1200px) {
 
     .MenuBar {
-        margin-left: -9px;
+        margin-left: 0;
     }
 }

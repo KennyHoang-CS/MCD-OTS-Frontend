@@ -23,7 +23,6 @@ export default function Customers() {
     let gameStatus = useSelector(state => state.game.gameStatus, shallowEqual);
     let gamePlayed = useSelector(state => state.game.gamePlayed, shallowEqual);
     let getTime = useSelector(state => state.game.time, shallowEqual);
-    let getFormattedTime = useSelector(state => state.game.formattedTime, shallowEqual);
 
     // the form to handle entering username into leaderboard. 
     let INITIAL_STATE = {
@@ -56,7 +55,7 @@ export default function Customers() {
             dispatch(resetCurrentOrder()); // clear the user input for next customer. 
         } else if (!orderPassed) {  
             alert("ORDER FAILED");
-        }
+        } 
     }
 
     // After the last customer, the game is over. 
@@ -81,7 +80,7 @@ export default function Customers() {
         setFormData(INITIAL_STATE);
 
         // Update the leaderboard with username, raw time (used for sorting), and formatted time. 
-        dispatch(updateLeaderboard(formData.username, getTime, getFormattedTime));  
+        dispatch(updateLeaderboard(formData.username, getTime, formatTime(getTime)));  
         
         // Reset gamePlayed back to false, so it can be used to determine if user has played the game or not. 
         dispatch(setGamePlayed(false));  
