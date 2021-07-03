@@ -2,7 +2,7 @@
 // Handles validating the user inputted order and checks if their input is correct
 // for that one customer. 
 export function validateOrder(inputOrder, newId) {
-
+    
     try {
         let id = --newId; 
 

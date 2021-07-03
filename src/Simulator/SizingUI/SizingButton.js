@@ -16,12 +16,12 @@ function SizingButton({ abbreviation, name }) {
     return (
         <div className="Sizing-Button" onClick={() => handleClick(abbreviation)}>
             <div className="Sizing-Button-Content">
-                <p className="abbreviation">
+                <div className="abbreviation">
                     { abbreviation }
                     <p className="sizing-name">
                         { name }
                     </p>
-                </p>
+                </div>
             </div>
         </div>
     )

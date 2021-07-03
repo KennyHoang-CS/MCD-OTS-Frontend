@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { fetchMenuFromAPI, nextCustomer, 
-    toggleGameStatus, getCustomerAnswer, 
+    toggleGameStatus, 
     resetCurrentOrder, resetGame, 
     setGamePlayed, 
     updateLeaderboard, setFormattedTime } from '../../../Redux/actionCreators';
-import { uuid } from 'uuidv4';
 import Customer from "./Customer";
 import { validateOrder } from './customerHelpers';
 import '../../../css/CustomerUI.css';
@@ -17,11 +16,10 @@ export default function Customers() {
     
     // customers and their answers, and the user input. 
     const customers = useSelector(state => state.customers.menu, shallowEqual);
-    let customerAnswer = useSelector(state => state.customers.customerAnswer, shallowEqual);
     let inputOrder = useSelector(state => state.currentOrder.order, shallowEqual);
 
     //  the current customer id, game status, game played, the time, and formatted time. 
-    let customerIdx = useSelector(state => state.game.customerIdx, shallowEqual);
+    let customerIdx = useSelector(state => state.game.customerIdx, shallowEqual) || 0;
     let gameStatus = useSelector(state => state.game.gameStatus, shallowEqual);
     let gamePlayed = useSelector(state => state.game.gamePlayed, shallowEqual);
     let getTime = useSelector(state => state.game.time, shallowEqual);
@@ -36,7 +34,6 @@ export default function Customers() {
     // use 'react-redux' to load in customers and their answers from backend. 
     useEffect(() => {
         dispatch(fetchMenuFromAPI('LOAD_CUSTOMERS', 'customers'));
-        dispatch(fetchMenuFromAPI('LOAD_ANSWERS', 'customers/answers'));
     }, [dispatch]);
         
     // handles starting the game. 
@@ -49,9 +46,6 @@ export default function Customers() {
     // handles submitting the user input order for the current customer. 
     function submitOrder(inputOrder) {
         
-        // get the current customer answer. 
-        dispatch(getCustomerAnswer(customers[customerIdx].id)); 
-
         // validate if the user input matches the current customer answer. 
         let orderPassed = validateOrder(inputOrder, customers[customerIdx].id);
         
@@ -132,8 +126,8 @@ export default function Customers() {
                 </div>
             }
             {!gameStatus && <button className="Customer-Start-Btn" onClick={startGame}>Start Game</button>}
-            {gameStatus && <Customer id={ customerIdx } image={ customers[customerIdx].customerimage } order={customers[customerIdx].fakeorder } />}
-            {gameStatus && <button className="Submit-Order-Btn" onClick={() => submitOrder(inputOrder, customerAnswer)}>Submit Order</button>}
+            {gameStatus && <Customer id={ customerIdx } image={ customers[customerIdx].customerimage } order={customers[customerIdx].fakeorder} />}
+            {gameStatus && <button className="Submit-Order-Btn" onClick={() => submitOrder(inputOrder)}>Submit Order</button>}
         </div>
     )
 }

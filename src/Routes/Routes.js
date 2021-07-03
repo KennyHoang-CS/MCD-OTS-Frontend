@@ -1,7 +1,5 @@
 import { Switch } from "react-router";
-import { Route } from 'react-router-dom';
-import { useHistory } from 'react-router-dom'
-
+import { Route, useHistory } from 'react-router-dom';
 import Simulator from "../Simulator/Simulator";
 import Leaderboard from '../Simulator/Leaderboard/Leaderboard';
 

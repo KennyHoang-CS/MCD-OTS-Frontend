@@ -86,5 +86,7 @@ export function checkDessertSizeEligibility(sizeState) {
 
     if (sizeState !== '') {
         return true;
+    } else {
+        return false;
     }
 }

@@ -10,7 +10,7 @@ export default function Item({ id, name, count, drinkAlert, type, comboSize }) {
     const classNameState = useSelector(st => st.currentItem.className, shallowEqual);
     
     // Get the item id that was clicked on. 
-    const itemState = useSelector(st => st.currentItem.id, shallowEqual);
+    const itemIdState = useSelector(st => st.currentItem.id, shallowEqual);
     
     // Determine if the item is a combo to determine a drink. 
     let liFlag = false; 
@@ -45,7 +45,7 @@ export default function Item({ id, name, count, drinkAlert, type, comboSize }) {
 
     return (
         // Render the item on the pending orders screen. 
-        <ul className={ (id === itemState) && classNameState } onClick={ () => handleClick(id) }>
+        <ul className={ ((id === itemIdState) && classNameState) || ''} onClick={ () => handleClick(id) }>
             { count } { name }
             { liFlag && 
                 <>

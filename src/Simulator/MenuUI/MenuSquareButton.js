@@ -5,7 +5,7 @@ import '../../css/MenuSquareButton.css';
 function MenuSquareButton({ name1 }) {
     return (
         <div className="Menu-Square-Button">
-            <div className="Menu-Square-Content" activeClassName='xd'>
+            <div className="Menu-Square-Content">
                 <NavLink exact to={`/${name1}`}>{ name1 }</NavLink>
             </div>
         </div>

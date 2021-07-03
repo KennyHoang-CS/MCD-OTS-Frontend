@@ -1,4 +1,5 @@
 import NumberCircleButton from './NumberCircleButton';
+import { v4 as uuidv4 } from 'uuid'
 
 // Handles displaying the whole numbers bar from 0-9.
 function NumbersBar() {
@@ -10,10 +11,10 @@ function NumbersBar() {
     return (
         <div className="NumbersBar">
             <div className="Left-Numbers">
-                {leftNumbers.map(n => <NumberCircleButton number={n} />)}
+                {leftNumbers.map(n => <NumberCircleButton key={uuidv4()} number={n} />)}
             </div>
             <div className="Right-Numbers">
-                {rightNumbers.map(n => <NumberCircleButton number={n} />)}
+                {rightNumbers.map(n => <NumberCircleButton key={uuidv4()} number={n} />)}
             </div>
         </div>
     )
