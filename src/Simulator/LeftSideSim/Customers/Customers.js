@@ -81,12 +81,12 @@ export default function Customers() {
             return;
         }
         
+         // Update the leaderboard with username, raw time (used for sorting), and formatted time. 
+         dispatch(updateLeaderboard(formData.username, getTime, formatTime(getTime))); 
+
         // Reset leaderboard username form to default.
         setFormData(INITIAL_STATE);
-
-        // Update the leaderboard with username, raw time (used for sorting), and formatted time. 
-        dispatch(updateLeaderboard(formData.username, getTime, formatTime(getTime)));  
-        
+         
         // Reset gamePlayed back to false, so it can be used to determine if user has played the game or not. 
         dispatch(setGamePlayed(false));  
     }
