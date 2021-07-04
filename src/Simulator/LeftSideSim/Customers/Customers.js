@@ -80,7 +80,7 @@ export default function Customers() {
             dispatch(setGamePlayed(false));
             return;
         }
-        
+        console.log('formData.username: ', formData.username);
          // Update the leaderboard with username, raw time (used for sorting), and formatted time. 
          dispatch(updateLeaderboard(formData.username, getTime, formatTime(getTime))); 
 
