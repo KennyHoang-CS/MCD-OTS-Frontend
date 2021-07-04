@@ -17,8 +17,10 @@ function DrinkButton({ id, name, image, sizeable }) {
 
         // Eligible drinks' sizes are medium by default, if not selected by size. 
         if (!sizeable) {
+            if (sizeState !== '') {
+                dispatch(setMessage(`Option not available for ${name}, default size added.`));
+            }
             sizeState = '';
-            dispatch(setMessage(`Option not available for ${name}, default size added.`));
             drinkName = name; 
         } else {
             drinkName = `${sizeState || 'M'} ${name}`;
