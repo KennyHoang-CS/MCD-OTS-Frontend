@@ -37,6 +37,7 @@ export default function Customers() {
         
     // handles starting the game. 
     function startGame() {
+        dispatch(resetCurrentOrder()); // clear any inputs before game starts.
         dispatch(setGamePlayed(false));
         dispatch(toggleGameStatus(true));
         dispatch(nextCustomer());
