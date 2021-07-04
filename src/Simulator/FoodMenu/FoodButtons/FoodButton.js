@@ -1,6 +1,6 @@
 import '../../../css/FoodUI.css';
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
-import { addToCurrentOrder, setSize, setQuantity } from '../../../Redux/actionCreators'
+import { addToCurrentOrder, setSize, setQuantity, setMessage } from '../../../Redux/actionCreators'
 import { checkItemEligibility, adjustItemName, adjustComboName } from './helpers';
 import { uuid } from 'uuidv4';
 
@@ -24,7 +24,7 @@ function FoodButton({ id, name, image, isCombo, sizeable, type, notComboAble, co
 
         // Display an alert message if requirements failed. 
         if (itemFailedStatus) {
-            alert('Option not available.');
+            dispatch(setMessage(`Option not available for ${name}.`));
             dispatch(setSize(''));
             return; 
         }
@@ -59,6 +59,7 @@ function FoodButton({ id, name, image, isCombo, sizeable, type, notComboAble, co
         };
 
         dispatch(addToCurrentOrder(newItem));
+        dispatch(setMessage(''));
         dispatch(setSize(''));
         dispatch(setQuantity(''));
     };

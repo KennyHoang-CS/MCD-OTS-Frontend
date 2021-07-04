@@ -34,7 +34,8 @@
 
 .User-Bottom{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    color: red;
+    grid-template-columns: 1fr;
     transform: translateY(-43px);
 }
 

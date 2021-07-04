@@ -3,7 +3,7 @@ import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { fetchMenuFromAPI, nextCustomer, 
     toggleGameStatus, 
     resetCurrentOrder, resetGame, 
-    setGamePlayed, 
+    setGamePlayed, setMessage,
     updateLeaderboard, setFormattedTime } from '../../../Redux/actionCreators';
 import Customer from "./Customer";
 import { validateOrder } from './customerHelpers';
@@ -51,11 +51,11 @@ export default function Customers() {
         
         // if user input passes, load in next customer. 
         if (orderPassed) {
-            alert("ORDER PASSED");
+            dispatch(setMessage(`Customer #${++customerIdx} passed.`))
             dispatch(nextCustomer());   // get the next customer. 
             dispatch(resetCurrentOrder()); // clear the user input for next customer. 
         } else if (!orderPassed) {  
-            alert("ORDER FAILED");
+            dispatch(setMessage(`Customer #${++customerIdx} failed.`))
         } 
     }
 

@@ -1,6 +1,6 @@
 
 const INITIAL_STATE = {
-    customerIdx: 8,
+    customerIdx: -1,
     gameStatus: false,
     time: 0,
     formattedTime: '',

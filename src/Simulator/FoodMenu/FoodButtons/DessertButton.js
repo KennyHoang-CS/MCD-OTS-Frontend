@@ -1,5 +1,5 @@
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
-import { addToCurrentOrder, setSize, setQuantity } from '../../../Redux/actionCreators'
+import { addToCurrentOrder, setSize, setQuantity, setMessage } from '../../../Redux/actionCreators'
 import { checkDessertSizeEligibility } from './helpers';
 import '../../../css/FoodUI.css';
 
@@ -19,7 +19,7 @@ function DessertButton({ name, image, id }) {
 
         // Display alert message if dessert size failed. 
         if (dessertFailStatus) {
-            alert('Option not available.');
+            dispatch(setMessage(`Option not available for ${name}.`));
             dispatch(setSize(''));
             return; 
         }
@@ -32,6 +32,7 @@ function DessertButton({ name, image, id }) {
         };
         dispatch(addToCurrentOrder(newItem));
         dispatch(setSize(''));
+        dispatch(setMessage(''));
         dispatch(setQuantity(''));
     };
 

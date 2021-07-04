@@ -20,6 +20,7 @@ import currentItemReducer from './currentItemReducer';
 import customersReducer from './customersReducer';
 import gameReducer from './gameReducer';
 import leaderboardReducer from './leaderboardReducer';
+import alertMessageReducer from './alertMessageReducer';
 
 const rootReducer = combineReducers({ 
     breakfast: breakfastReducer, 
@@ -42,7 +43,8 @@ const rootReducer = combineReducers({
     currentItem: currentItemReducer,
     customers: customersReducer,
     game: gameReducer,
-    leaderboard: leaderboardReducer
+    leaderboard: leaderboardReducer,
+    message: alertMessageReducer
 });
 
 export default rootReducer; 

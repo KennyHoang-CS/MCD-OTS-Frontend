@@ -1,3 +1,4 @@
+import { useSelector, shallowEqual } from "react-redux";
 import '../../css/UserUI.css';
 import UserIcon from './UserIcon';
 
@@ -11,6 +12,8 @@ function UserBar() {
     
     // get the current time. 
     let time = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+
+    let messageState = useSelector(state => state.message.message, shallowEqual);
 
     return (
         <div className="User-Bar-Container">
@@ -26,11 +29,7 @@ function UserBar() {
                 <p>{date}</p>
             </div>
             <div className="User-Bottom">
-                <p></p>
-                <p>POS 27</p>
-                <p>FC</p>
-                <p></p>
-                <p>Open</p>
+                <p>{messageState || 'Message Status: '}</p>
             </div>
             </div>
         </div>

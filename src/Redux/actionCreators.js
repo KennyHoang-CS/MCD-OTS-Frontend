@@ -53,6 +53,13 @@ export function setSize(name) {
     };
 }
 
+export function setMessage(message) {
+    return {
+        type: 'SET_MESSAGE',
+        message
+    }
+};
+
 export function getSize() {
     return {
         type: 'GET_SIZE'
