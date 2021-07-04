@@ -4,7 +4,7 @@ import LeaderboardRank from './LeaderboardRank';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 
-const BASE_URL = 'http://localhost:3001';
+const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3001";
 
 // Handles displaying the leaderboard. 
 export default function Leaderboard() {
