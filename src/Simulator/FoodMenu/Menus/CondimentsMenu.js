@@ -3,7 +3,7 @@ import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { fetchMenuFromAPI } from '../../../Redux/actionCreators';
 import FoodButton from "../FoodButtons/FoodButton";
 import '../../../css/MenuUI.css';
-import { uuid } from 'uuidv4';
+import { v4 as uuidv4 } from 'uuid';
 
 // Handles displaying condiments.
 function CondimentsMenu() {
@@ -19,7 +19,15 @@ function CondimentsMenu() {
     return (
         // Display condiments menu as a list of buttons. 
         <div className="Condiments-Container">
-            {menu && menu.map(food => <FoodButton id={uuid()} name={food.name} image={food.imagesrc} flag="sauce"/>)}
+            {menu && menu.map(food => 
+                <FoodButton 
+                    key={uuidv4()}
+                    id={uuidv4()} 
+                    name={food.name} 
+                    image={food.imagesrc} 
+                    flag="sauce"/>
+                )
+            }
         </div>
     )
 }

@@ -3,7 +3,7 @@ import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { fetchMenuFromAPI } from '../../../Redux/actionCreators';
 import DrinkButton from "../FoodButtons/DrinkButton";
 import '../../../css/MenuUI.css';
-import { uuid } from 'uuidv4';
+import { v4 as uuidv4 } from 'uuid';
 
 // Handles displaying McCafe menu. 
 function McCafeMenu() {
@@ -19,7 +19,17 @@ function McCafeMenu() {
     return (
         // render McCafe menu as a list of buttons.  
         <div className="McCafe-Container">
-            {menu && menu.map(d => <DrinkButton id={uuid()} name={d.name} image={d.imagesrc} isCombo={d.is_combo_item} sizeable={d.sizeable} type={d.type}/>)}
+            {menu && menu.map(d => 
+                <DrinkButton 
+                    key={uuidv4()}
+                    id={uuidv4()} 
+                    name={d.name} 
+                    image={d.imagesrc} 
+                    isCombo={d.is_combo_item} 
+                    sizeable={d.sizeable} 
+                    type={d.type}/>
+                )
+            }
         </div>
     )
 }

@@ -3,7 +3,7 @@ import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { fetchMenuFromAPI } from '../../../Redux/actionCreators';
 import DrinkButton from "../FoodButtons/DrinkButton";
 import '../../../css/MenuUI.css';
-import { uuid } from 'uuidv4';
+import { v4 as uuidv4 } from 'uuid';
 
 // Handles displaying special drinks menu like smoothies, milk, and etc. 
 function SpecialDrinksMenu() {
@@ -19,7 +19,15 @@ function SpecialDrinksMenu() {
     return (
         // render drinksMenu as a list of buttons.  
         <div className="Drink-Container-2">
-            {drinksMenu && drinksMenu.map(d => <DrinkButton id={uuid()} name={d.name} image={d.imagesrc} sizeable={d.sizeable}/>)}
+            {drinksMenu && drinksMenu.map(d => 
+                <DrinkButton 
+                    key={uuidv4()}
+                    id={uuidv4()} 
+                    name={d.name} 
+                    image={d.imagesrc} 
+                    sizeable={d.sizeable}/>
+                )
+            }
         </div>
     )
 }

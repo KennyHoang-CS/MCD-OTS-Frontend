@@ -71,7 +71,7 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
 
             // add an existing stand-alone drink to a combo. 
             if (action.order.hasCombo === true) {
-                console.log(' add an existing stand-alone drink to a combo. ')
+                
                 // locate the existing stand-alone drink to insert into combo. 
                 let soloDrinkFound = state.order.findIndex( 
                     i => i.foodType === 'drink'
@@ -79,12 +79,11 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
 
                 // existing stand-alone drink was found if it isn't -1. 
                 if (soloDrinkFound !== -1) {
-                    console.log("existing stand-alone drink was found if it isn't -1.")
                 
                 // CASE: 2 drinks of the same vs 3 upcoming combo meals.
                 // i.e. 2 cokes vs 3 meals. 
                 if (state.order[soloDrinkFound].count < action.order.count) {
-                    console.log("CASE: 2 drinks of the same vs 3 upcoming combo meals.")
+                    
                     let newCount = action.order.count - state.order[soloDrinkFound].count;
                     let foodType = action.order.type; 
                     let comboSize = action.order.comboSize;
@@ -113,7 +112,7 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
                         
                     // remove drink from state, since # quantity was used up. 
                     state.order.splice(soloDrinkFound, 1);
-                    console.log("REMOVE DRINK FROM STATE")
+                    
                     return {
                         ...state,
                         order: [
@@ -132,11 +131,11 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
                     
                 // if the drink has a count of 1, remove it. 
                 if (state.order[soloDrinkFound].count === 1) {
-                    console.log('if drink has a count of ')
+                
                     state.order.splice(soloDrinkFound, 1);
                 } else {    
                     // CASE: solo drinks > upcoming combo meals: 3 cokes vs 2 meals
-                    console.log("solo drinks > upcoming combo meals: 3 cokes vs 2 meals")
+                    
                     if (state.order[soloDrinkFound].count >= action.order.count) {
                         state.order[soloDrinkFound].count -= action.order.count;
                         if (state.order[soloDrinkFound].count === 0) {
@@ -161,7 +160,7 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
 
             // Check if an existing item combo needs a drink to be inserted. 
             if (action.order.foodType === 'drink') {
-                console.log('drinks 11111')
+                
                 // Find the combo item location for the drink to be inserted. 
                 let drinkToInsertFound = 
                     state
@@ -180,7 +179,7 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
                 
                 // There exists an item combo that needs a drink. 
                 if (drinkToInsertFound !== -1) {
-                    console.log('drinks 2222')
+                    
                     // If there exists an item combo with the same drink.  
                     
                     if ((comboWithSameDrinkFound !== -1)) {
@@ -214,7 +213,7 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
 
                     // There exists multiple item combos of the same found that needs a drink. 
                     if (state.order[drinkToInsertFound].count >= 1) {
-                        console.log('drinks 333')
+                        
                         // Get name of the current combo name from state. 
                         let currentStateName = state.order[drinkToInsertFound].name;
                         
@@ -310,7 +309,7 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
                                     ]
                                 }; 
                             }
-                            console.log('drinks 444444')
+                            
                             // If there is extra drinks, and no combos that needs a drink to be inserted. 
                             // Add the extra drinks as an item. 
                             return {
@@ -322,7 +321,7 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
                                 ]
                             }; 
                         } else {
-                            console.log('drinks 555555')
+                            
                            // state.lastComboItem = action
                             return {
                                 ...state,
@@ -337,7 +336,7 @@ function currentOrderReducer(state = INITIAL_STATE, action) {
                         state.order[drinkToInsertFound].hasCombo = false; 
                         // set that combo drink to the drink's name that we inserted. 
                         state.order[drinkToInsertFound].drinkAlert = action.order.name;
-                        console.log('66666666')
+                        
                         return {
                             ...state,
                             order:  [

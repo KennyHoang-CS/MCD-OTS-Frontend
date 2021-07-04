@@ -3,7 +3,7 @@ import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { fetchMenuFromAPI } from '../../../Redux/actionCreators';
 import DessertButton from "../FoodButtons/DessertButton";
 import '../../../css/MenuUI.css';
-import { uuid } from 'uuidv4';
+import { v4 as uuidv4 } from 'uuid';
 
 // Handles displaying the happy meal menu. 
 function HappyMealMenu() {
@@ -19,7 +19,14 @@ function HappyMealMenu() {
     return (
         // render happy meal items as a list of buttons.  
         <div className="Happy-Meals-Container">
-            {menu && menu.map(food => <DessertButton id={uuid()} name={food.name} image={food.imagesrc}/>)}
+            {menu && menu.map(food => 
+                <DessertButton 
+                    key={uuidv4()}
+                    id={uuidv4()} 
+                    name={food.name} 
+                    image={food.imagesrc}
+                />)
+            }
         </div>
     )
 }

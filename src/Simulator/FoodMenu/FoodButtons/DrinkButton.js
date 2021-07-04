@@ -17,9 +17,9 @@ function DrinkButton({ id, name, image, sizeable }) {
 
         // Eligible drinks' sizes are medium by default, if not selected by size. 
         if (!sizeable) {
-            dispatch(setMessage(`Option not available for ${name}.`));
-            dispatch(setSize(''));
-            return; 
+            sizeState = '';
+            dispatch(setMessage(`Option not available for ${name}, default size added.`));
+            drinkName = name; 
         } else {
             drinkName = `${sizeState || 'M'} ${name}`;
         }
@@ -32,7 +32,6 @@ function DrinkButton({ id, name, image, sizeable }) {
             id
         };
         dispatch(addToCurrentOrder(newItem));
-        dispatch(setMessage(''));
         dispatch(setSize(''));
         dispatch(setQuantity(''));
     };

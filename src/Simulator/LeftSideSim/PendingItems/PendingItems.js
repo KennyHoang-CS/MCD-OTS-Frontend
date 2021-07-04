@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import Item from "./Item";
+import { v4 as uuidv4 } from 'uuid';
 
 // Handles displaying the current state of items on the pending orders screen. 
 function PendingItems() {
@@ -13,7 +14,7 @@ function PendingItems() {
         orderState
         .map(
         i => 
-        <Item id={ i.id } name={ i.name } count={ i.count } drinkAlert={ i.drinkAlert } type={ i.foodType || i.type } comboSize ={ i.comboSize }/>
+        <Item key={ uuidv4() } id={ i.id } name={ i.name } count={ i.count } drinkAlert={ i.drinkAlert } type={ i.foodType || i.type } comboSize ={ i.comboSize }/>
     );
 
     return (

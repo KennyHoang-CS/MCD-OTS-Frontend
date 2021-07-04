@@ -3,7 +3,7 @@ import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { fetchMenuFromAPI } from '../../../Redux/actionCreators';
 import FoodButton from "../FoodButtons/FoodButton";
 import '../../../css/MenuUI.css';
-import { uuid } from 'uuidv4';
+import { v4 as uuidv4 } from 'uuid';
 
 // Handles displaying breakfast 2 menu. 
 function Breakfast2Menu() {
@@ -21,7 +21,8 @@ function Breakfast2Menu() {
         <div className="Menu-Container">
             {menu && menu.map(
                 food => <FoodButton 
-                    id={uuid()} 
+                    key={uuidv4()}
+                    id={uuidv4()} 
                     name={food.name} 
                     image={food.imagesrc} 
                     isCombo={food.is_combo_item} 
