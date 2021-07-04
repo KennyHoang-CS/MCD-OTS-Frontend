@@ -1,6 +1,3 @@
-.Utility-Bar {
-   
-}
 
 .Utility-Button {
     border-radius: 50%;
@@ -38,7 +35,8 @@
 
 @media only screen and (max-width: 600px) {
     .Utility-Bar {
-        margin-left: 0;
+        margin-left: 375%;
+        background-color: yellow;
         transform: translateY(-5px);
     }
 }

@@ -50,6 +50,11 @@
         margin-top: 0;
         display: grid;
         justify-content: center;
+        margin-left: 14%;
+    }
+
+    .Menu-Content-Container {
+        margin-right: 0;
     }
 
     .Left-Menu-Bar {
@@ -65,28 +70,28 @@
         display: grid;
         grid-template-columns: repeat(3, 80px);
         row-gap: 23px;
-        margin-left: 0;
+        margin-left: 170%;
     }
 
     .Happy-Meals-Container, .Condiments-Container {
         display: grid;
         grid-template-columns: repeat(3, 80px);
         row-gap: 23px;
-        margin-left: 0px;
+        margin-left: 120%;
     }
 
     .Dessert-Menu-Container {
         display: grid;
         grid-template-columns: repeat(3, 80px);
         row-gap: 23px;
-        margin-left: 0px;
+        margin-left: 120%;
     }
 
     .McCafe-Container {
         display: grid;
         grid-template-columns: repeat(3, 80px);
         row-gap: 23px;
-        margin-left: 10px;
+        margin-left: 120%;
         margin-bottom: 50px;
     }
 
@@ -96,14 +101,18 @@
         row-gap: 23px;
         margin-top: 50px;
         margin-bottom: 50px;
-        margin-left: 0px;
+        margin-left: 120%;
     }
 
     .Drink-Container-2 {
         display: grid;
         grid-template-columns: repeat(3, 80px);
         row-gap: 23px;
-        margin-left: 10px;
+        margin-left: 120%;
+    }
+
+    .LSM-Menu-Container {
+        margin-left: 335%;
     }
     
 }

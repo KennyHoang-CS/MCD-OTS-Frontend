@@ -103,8 +103,62 @@
     }
 
     .Orders-Placed {
-        margin-right: 5%;
+        margin-right: 0;
     }
+
+    .Pending-Orders h2 {
+        margin-left: 15vw;
+    }
+
+    .Top-Container {
+        background-color: #ccc;
+    }
+
+    .Customer-Start-Btn {
+        margin: 0 5px;
+        padding: 10px;
+        margin-left: 15%;
+        background-color: rgba(220, 20, 60);
+        border-radius: 5px;
+        color: white;
+        font-weight: bolder;
+    }
+    
+    .Customer-Start-Btn:hover {
+        margin: 0 5px;
+        padding: 10px;
+        margin-left: 15%;
+        cursor: pointer;
+        background-color: rgba(220, 20, 60, 0.6);
+        border-radius: 5px;
+        color: white;
+        font-weight: bolder;
+        transition: all 0.2s;
+    }
+
+    .Leaderboard-Btn {
+        padding: 10px;
+        background-color: rgba(0, 0, 255, 0.7);
+        border-radius: 5px;
+        color: white;
+        font-weight: bolder;
+        margin-bottom: 15px;
+        margin-top: 7vh;
+        margin-left: 15%;
+    }
+
+    .Leaderboard-Btn:hover {
+        margin: 0 5px;
+        padding: 10px;
+        background-color: rgba(0, 0, 245, 0.6);
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        margin-bottom: 15px;
+        margin-top: 7vh;
+        margin-left: 15%;
+    }
+
 }
 
 @media only screen and (min-width: 600px){
