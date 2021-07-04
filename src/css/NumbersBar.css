@@ -14,7 +14,7 @@
 }
 
 .Top-Container {
-    
+    background-color: #ccc;
 }
 
 .MenuBar {
@@ -90,14 +90,12 @@
 
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1230px) {
 
     .Top-Container {
-        transform: translateX(-225px);
     }
 
     .NumbersBar {
         margin-left: 0;
     }
-
 }

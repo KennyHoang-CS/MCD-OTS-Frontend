@@ -1,7 +1,6 @@
 
 .Simulator-Container {
     background-color: #ccc;
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -28,7 +27,7 @@
 @media only screen and (min-width: 1200px) { 
 
     .Simulator-Container {
-        margin-left: -100px;
+        margin-right: 0;
     }
 }
 

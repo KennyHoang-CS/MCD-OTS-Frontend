@@ -52,12 +52,14 @@ export default function Customers() {
         
         // if user input passes, load in next customer. 
         if (orderPassed) {
-            dispatch(setMessage(`Customer #${++customerIdx} passed.`))
-            dispatch(nextCustomer());   // get the next customer. 
-            dispatch(resetCurrentOrder()); // clear the user input for next customer. 
+            //dispatch(setMessage(`Customer #${++customerIdx} passed.`))
+           // dispatch(nextCustomer());   // get the next customer. 
+           // dispatch(resetCurrentOrder()); // clear the user input for next customer. 
         } else if (!orderPassed) {  
-            dispatch(setMessage(`Customer #${++customerIdx} failed.`))
+           // dispatch(setMessage(`Customer #${++customerIdx} failed.`))
         } 
+        dispatch(nextCustomer());   // get the next customer. 
+            dispatch(resetCurrentOrder()); // clear the user input for n
     }
 
     // After the last customer, the game is over. 
@@ -111,7 +113,7 @@ export default function Customers() {
         <div>
             {gamePlayed && 
                 <div className="User-Form">                    
-                    <h3>Time Achieved: {formatTime()}</h3>
+                    <h3 className="Timer-Achieved">Time Achieved: {formatTime()}</h3>
                     <form className="Form-Wrapper"  onSubmit={handleSubmit}>
                         <label htmlFor="username">Username: </label>
                         <input 

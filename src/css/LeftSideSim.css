@@ -107,7 +107,7 @@
     }
 
     .Pending-Orders h2 {
-        margin-left: 15vw;
+        margin-left: 22vw;
     }
 
     .Top-Container {
@@ -191,12 +191,12 @@
     .Left-Side-Sim {
         display: grid;
         grid-template-columns: 450px;
-        grid-template-rows: 1.2fr 1fr;
+        grid-template-rows: auto;
     }
 
     .Current-Items-Container {
         display: grid;
-        grid-template-columns: 525px;
+        grid-template-columns: 1fr;
         grid-template-rows: 250px;
         overflow: scroll;
     }
@@ -208,12 +208,12 @@
     .Pending-Orders h2 {
         border-bottom: 2px solid black;
         padding-bottom: 10px;
-        font-size: 20px;
-        margin-left: 100px;
+        font-size: 15px;
+        margin-left: 45%;
     }
 
     .Orders-Placed {
-        padding-left: 60px;
+        padding-left: 36%;
     }
 
     .Leaderboard-Btn {
@@ -304,32 +304,41 @@
     }
 
     .Pending-Orders {
-        margin-right: 65px;
+        margin-right: 0;
     }
+
 }
 
 @media only screen and (min-width: 1200px) {
 
     .Customer-Start-Btn {
         margin-right: 0;
-        transform: translateX(-80px);
+        transform: translateX(-37px);
         width: 100px;
     }
     
     .Customer-Start-Btn:hover {
         margin-right: 0;
-        transform: translateX(-80px);
+        transform: translateX(-37px);
         width: 100px;
     }
 
     .Leaderboard-Btn {
-        margin-right: 35%;
+        margin-right: 0;
         transform: translateX(-37px);
     }
     
     .Leaderboard-Btn:hover {
-        margin-right: 35%;
+        margin-right: 0;
         transform: translateX(-37px);
+    }
+
+    .Mock-Orders-Container {
+        margin-left: 0;
+    }
+
+    .Pending-Orders {
+        transform: translateX(-70px);
     }
 
 }
