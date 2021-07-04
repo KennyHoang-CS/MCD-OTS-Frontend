@@ -1,3 +1,4 @@
+
 const INITIAL_STATE = {
     quantity: ''
 };
@@ -10,7 +11,7 @@ function quantityReducer(state = INITIAL_STATE, action) {
             
             let newQuantity
             if (state.quantity.length > 2) {
-                alert('Quantity allows only 3 digits.');
+                
                 state.quantity = '';
                 return {
                     ...state,

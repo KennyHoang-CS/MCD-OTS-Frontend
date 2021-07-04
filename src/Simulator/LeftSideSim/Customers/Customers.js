@@ -37,6 +37,7 @@ export default function Customers() {
         
     // handles starting the game. 
     function startGame() {
+        dispatch(setMessage(''));
         dispatch(resetCurrentOrder()); // clear any inputs before game starts.
         dispatch(setGamePlayed(false));
         dispatch(toggleGameStatus(true));
@@ -51,16 +52,12 @@ export default function Customers() {
         
         // if user input passes, load in next customer. 
         if (orderPassed) {
-         /*
             dispatch(setMessage(`Customer #${++customerIdx} passed.`))
             dispatch(nextCustomer());   // get the next customer. 
             dispatch(resetCurrentOrder()); // clear the user input for next customer. 
-            */
         } else if (!orderPassed) {  
-           // dispatch(setMessage(`Customer #${++customerIdx} failed.`))
+            dispatch(setMessage(`Customer #${++customerIdx} failed.`))
         } 
-        dispatch(nextCustomer());   // get the next customer. 
-        dispatch(resetCurrentOrder()); // clear the user input for next customer.
     }
 
     // After the last customer, the game is over. 
@@ -80,13 +77,13 @@ export default function Customers() {
             dispatch(setGamePlayed(false));
             return;
         }
-        console.log('formData.username: ', formData.username);
-         // Update the leaderboard with username, raw time (used for sorting), and formatted time. 
-         dispatch(updateLeaderboard(formData.username, getTime, formatTime(getTime))); 
+        
+        // Update the leaderboard with username, raw time (used for sorting), and formatted time. 
+        dispatch(updateLeaderboard(formData.username, getTime, formatTime(getTime))); 
 
         // Reset leaderboard username form to default.
         setFormData(INITIAL_STATE);
-         
+        
         // Reset gamePlayed back to false, so it can be used to determine if user has played the game or not. 
         dispatch(setGamePlayed(false));  
     }
