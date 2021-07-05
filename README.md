@@ -18,7 +18,7 @@
   <li>Click on food items to place them on the screen.</li>
   <li>Click on a size then a food item to make it a combo. Eligible breakfast items only have medium sized combos while eligible lunch items only have medium and large.</li>
   <li>Double click an item to toggle it.</li>
-  <li>Clicking 'Void Item' deletes an item from the screen.</li>
+  <li>Clicking 'Void Item' deletes a toggled item from the screen.</li>
   <li>To clear a drink from an item combo, toggle the item then click 'Clear Choice'.</li>
 </ul> 
 
