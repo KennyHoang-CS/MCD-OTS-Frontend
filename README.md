@@ -17,6 +17,37 @@
 </ul> 
 
 ## Tests
+<p>
+<ol>
+<li>Navigate to <strong>\McDonald Order-Taking Simular\mcdonalds-frontend\src</strong><br></li>
+<li>Using the terminal, run the command <code>npm test</code></li>
+</ol> 
+</p>
 
+## User Flows 
+<ul>
+<li>Visit the leaderboards before starting the game.</li>
+<li>Play the game.</li>
+<li>Browse through the varying menus.</li>
+</ul> 
+
+## Technology Stack 
+<p>
+ <ul>
+<li>Javascript</li>
+<li>React</li>
+<li>Redux</li>
+<li>Node.js</li>
+   <li>Axios</li>
+</ul> 
+</p>
+
+## Running the program
+<ol>
+  <li>Fork this project from the github page.</li>
+  <li>Have node dependencies installed. </li>
+  <li>Navigate to the <strong>\McDonald Order-Taking Simular\mcdonalds-frontend</strong> folder.</li>
+  <li>Run the command <code>npm start</code>
+<ol>
 
 
