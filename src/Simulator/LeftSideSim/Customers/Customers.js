@@ -52,12 +52,16 @@ export default function Customers() {
         
         // if user input passes, load in next customer. 
         if (orderPassed) {
+            /*
             dispatch(setMessage(`Customer #${++customerIdx} passed.`))
             dispatch(nextCustomer());   // get the next customer. 
-            dispatch(resetCurrentOrder()); // clear the user input for next customer. 
+            dispatch(resetCurrentOrder()); // clear the user input for next customer.
+            */ 
         } else if (!orderPassed) {  
-            dispatch(setMessage(`Customer #${++customerIdx} failed.`))
+           // dispatch(setMessage(`Customer #${++customerIdx} failed.`))
         } 
+        dispatch(nextCustomer());   // get the next customer. 
+        dispatch(resetCurrentOrder()); // clear the user input for next customer.
     }
 
     // After the last customer, the game is over. 

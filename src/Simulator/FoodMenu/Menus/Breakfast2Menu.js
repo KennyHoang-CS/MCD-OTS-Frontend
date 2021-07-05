@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { fetchMenuFromAPI } from '../../../Redux/actionCreators';
 import FoodButton from "../FoodButtons/FoodButton";
@@ -10,10 +10,12 @@ function Breakfast2Menu() {
     
     const dispatch = useDispatch();
     const menu = useSelector(state => state.breakfast2.menu, shallowEqual);
+    const [isLoading, setIsLoading] = useState(true);
 
     // Load in our breakfast 2 menu from API using react-redux. 
     useEffect(() => {
         dispatch(fetchMenuFromAPI('LOAD_BREAKFAST2_MENU', 'breakfast-2'))
+        setIsLoading(false); 
     }, [dispatch]);
         
     return (

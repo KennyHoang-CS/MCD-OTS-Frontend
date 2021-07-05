@@ -4,6 +4,7 @@ import { addToCurrentOrder, setSize, setQuantity, setMessage } from '../../../Re
 import { checkItemEligibility, adjustItemName, adjustComboName } from './helpers';
 import { uuid } from 'uuidv4';
 
+
 // Function that displays the food item as a button. 
 function FoodButton({ id, name, image, isCombo, sizeable, type, notComboAble, comboNumber, flag }) {
     
