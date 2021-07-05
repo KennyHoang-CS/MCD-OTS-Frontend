@@ -3,17 +3,23 @@
 ## Description
 <p> 
   The Mcdonald's OTS application is a Mcdonald's order taking simulator to stimulate how employees would take customer orders. This involves loading 
-  in different type of menus: breakfast, lunch, and more. Users may play a game to see how fast they can complete orders to post their username and timer completion. 
+  in different type of menus: breakfast, lunch, and more. Users may play a game to see how fast they can complete orders to post their username and timer completion.
   
+  <strong>Project (left) vs Mcdonalds' Real Ordering System (right)</strong>
   
-  Project (left) vs Mcdonalds' Real Ordering System (right)
   ![image](https://user-images.githubusercontent.com/77515138/124517531-0cd5b900-dd99-11eb-9272-5966c68ab82d.png)
 </p>
 
-## Features 
+## Features / Playing the Game 
 
 <ul>
 <li>A stimulation game to mock customers' orders, this will allow users to stimulate the Mcdonald's order taking system. </li>
+  <li><strong>How fast can a user complete 19 customer orders? </strong> </li>
+  <li>Click on food items to place them on the screen.</li>
+  <li>Click on a size then a food item to make it a combo. Eligible breakfast items only have medium sized combos while eligible lunch items only have medium and large.</li>
+  <li>Double click an item to toggle it.</li>
+  <li>Clicking 'Void Item' deletes an item from the screen.</li>
+  <li>To clear a drink from an item combo, toggle the item then click 'Clear Choice'.</li>
 </ul> 
 
 ## Tests
