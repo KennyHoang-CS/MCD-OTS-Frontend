@@ -7,7 +7,7 @@
     .Simulator-Container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 100vh;
+        grid-template-rows: auto;
         justify-content: center;
     }
     
@@ -18,7 +18,7 @@
         background-color: #ccc;
         display: grid;
         grid-template-columns: 1fr 1fr ;
-        grid-template-rows: 100vh;
+        grid-template-rows: auto;
         justify-content: center;
     }
     

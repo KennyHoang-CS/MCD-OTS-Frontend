@@ -181,24 +181,12 @@
     }
 }
 
-@media only screen and (min-width: 768px){
-
-
-}
-
 @media only screen and (min-width: 992px){
 
     .Left-Side-Sim {
         display: grid;
-        grid-template-columns: 450px;
+        grid-template-columns: 500px;
         grid-template-rows: auto;
-    }
-
-    .Current-Items-Container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 250px;
-        overflow: scroll;
     }
 
     .Mock-Orders-Container {
@@ -307,6 +295,10 @@
         margin-right: 0;
     }
 
+    .Orders-Header {
+        margin-right: 5%;
+    }
+
 }
 
 @media only screen and (min-width: 1200px) {
@@ -336,9 +328,14 @@
     .Mock-Orders-Container {
         margin-left: 0;
     }
+}
 
-    .Pending-Orders {
-        transform: translateX(-70px);
+@media only screen and (min-width: 1460px){
+
+    .Left-Side-Sim {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
 
 }

@@ -211,7 +211,8 @@ label{
         display: flex;
         justify-content: center;
         font-weight: 900;
-        margin-left: 12vw;
+        margin-left: 25%;
+        margin-top: 10%;
         transform: translateY(-20px);
     }
     

@@ -20,8 +20,10 @@ function PendingItems() {
     return (
         // Renders the items on the pending orders screen.
         <div className="Pending-Orders">
-            {gameStatus && <h2>Customer Order #{++customerIdx}</h2>}
-            {!gameStatus && <h2>19 Pending Customers</h2>}
+            <div className="Orders-Header">
+                {gameStatus && <h2>Customer Order #{++customerIdx}</h2>}
+                {!gameStatus && <h2>19 Pending Customers</h2>}
+            </div>
             <div className="Orders-Placed">
                 { myOrder }
             </div>
