@@ -49,5 +49,11 @@
   <li>Navigate to the <strong>\McDonald Order-Taking Simular\mcdonalds-frontend</strong> folder.</li>
   <li>Run the command <code>npm start</code>
 <ol>
+  
+##### Side Notes
+<p>
+    There exists edge cases to be fixed when the user place items on the screen. I.E. Multiple distinct stand-alone drinks should be inserted into multiple upcoming combos.
+    Common edge cases and other unique edge cases are fixed to provide a smooth experience of placing items on the screen. 
+</p>  
 
 
