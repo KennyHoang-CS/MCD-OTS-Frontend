@@ -56,6 +56,11 @@
 </ul> 
 </p>
 
+## Responsive Layout 
+
+![image](https://user-images.githubusercontent.com/77515138/124644542-3d742c00-de47-11eb-84c9-8de6824f410b.png)
+
+
 ## Running the program
 <ol>
   <li>Fork this project from the github page.</li>
