@@ -24,7 +24,7 @@
 
 <strong> 
   When you get a customer order correct, it will go to the next customer and the message status displays "Customer #X passed" (shown in left picture)
-  When you get a customer order incorrect, the message status will display "Customer #X failed," so you must keep adjusting the order until the order is correct. 
+  When you get a customer order incorrect, the message status will display "Customer #X failed," so you must keep adjusting the order until the order is correct (shown in right picture).
 </strong> <br> <br>
 
 ![image](https://user-images.githubusercontent.com/77515138/124642526-c9d11f80-de44-11eb-917f-e03c8998f51a.png)
