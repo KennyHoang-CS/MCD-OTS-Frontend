@@ -10,6 +10,18 @@
   ![image](https://user-images.githubusercontent.com/77515138/124517531-0cd5b900-dd99-11eb-9272-5966c68ab82d.png)
 </p>
 
+## How I built this?
+<p>
+  Created a responsive front-end for different screen sizes between 600 and 1200+ pixels using media queries. React is used to create the user interface for
+fake customers' orders and a variety of 10+ food menus. Redux handles the state of the user's food menu interactions for placing food items. Constructed
+the back-end API to handle endpoint routes for all food items, a leaderboard, and fake customer orders using node, express, and PostgreSQL.
+</p>
+
+## My Source of Inspiration
+<p>
+  I worked at McDonald's as a crew member for 4+ years, and always wanted my new hires to gain more experience taking customers' orders outside the workplace. Hence, the project is born. 
+</p>
+
 ## Features / Playing the Game 
 
 <ul>
